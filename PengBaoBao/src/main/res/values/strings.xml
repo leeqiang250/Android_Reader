@@ -1,0 +1,137 @@
+<resources>
+
+    <string name="app_name">鹏保宝</string>
+    <!--<string name="app_name">PBB Reader</string>&lt;!&ndash;Reader&ndash;&gt;-->
+    <!--<string name="app_update_url">http://www.pyc.com.cn/AppUpdate/pbb/updateinfo.txt</string>-->
+    <string name="make_pbb">制作.pbb文件</string>
+    <string name="search_hint">Search Files</string>
+    <string name="search_title">Search Files</string>
+    <string name="favorite_photo">Photo</string>
+    <string name="favorite_sdcard">SD Card</string>
+    <string name="favorite_screen_cap">MIUI Screen Shot</string>
+    <string name="favorite_ringtone">Ringtone</string>
+    <string name="wlan_explain">使用帮助</string>
+    <string name="wlan_explain1">您已经选择通过WiFi方式连接电脑</string>
+    <string name="hexin_download_addr">http://www.pyc.com.cn/Application/Application.aspx?pid=18</string>
+    <string name="category_all">All</string>
+    <string name="category_apk">APKs</string>
+    <string name="category_document">Docs</string>
+    <string name="category_favorite">Favorites</string>
+    <string name="category_music">Music</string>
+    <string name="category_other">Misc</string>
+    <string name="category_picture">Pics</string>
+    <string name="category_theme">Themes</string>
+    <string name="category_video">Videos</string>
+    <string name="category_zip">Zips</string>
+    <string name="notif_server_starting">FTP server started</string>
+    <string name="notif_title">SwiFTP is running</string>
+    <string name="file_info_canread">Readable:</string>
+    <string name="file_info_canwrite">Writable:</string>
+    <string name="file_info_ishidden">Hidden:</string>
+    <string name="file_info_location">Path:</string>
+    <string name="file_info_modified">Modified:</string>
+    <string name="file_info_size">Size:</string>
+    <string name="file_size">%d Bytes</string>
+    <string name="wifi_state">WLAN状态</string>
+    <string name="instruction">请在电脑上用浏览器访问以下地址：</string>
+    <string name="instruction_pre">开启服务后可以从电脑端远程管理手机文件</string>
+    <string name="no_wifi">未检测到WiFi网络</string>
+    <string name="start_server"><b>开启服务</b></string>
+    <string name="stop_server"><b>停止服务</b></string>
+    <string name="storage_warning">Warning: storage is not available. You may want to unmount it.</string>
+    <string name="dialog_select_type">Select file type</string>
+    <string name="dialog_type_text">Text</string>
+    <string name="dialog_type_audio">Audio</string>
+    <string name="dialog_type_video">Video</string>
+    <string name="dialog_type_image">Image</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="confirm_know">OK</string>
+    <string name="no_storage_available">没有可用存储</string>
+    <string name="password_error">密码不正确！</string>
+    <string name="received_prompt">鹏保宝已不提供.pbb文件的阅读功能，请下载PbbReader阅读.pbb文件</string>
+    <string name="pbb_net_disconnected">对不起,联网失败。</string>
+    <string name="pbb_login_account_not_empty">账号或密码不能为空.</string>
+    <string name="pbb_login_ing">正在登录…</string>
+    <string name="pbb_access_server_failed">对不起,请求服务器失败.</string>
+
+    <string name="other_login">第三方登录</string>
+    <string name="pe_verification_password">手机号或邮箱,验证码密码不能为空</string>
+    <string name="email_register">使用邮箱注册</string>
+    <string name="phone_register">使用手机注册</string>
+    <string name="phone_email_is_empty">手机号或邮箱不能为空</string>
+
+
+    <!-- 添加string请写明注释，并规范命名 -->
+    <!-- 添加string请写明注释，并规范命名 -->
+
+    <string name="discover_label">发现</string>
+    <string name="i_known">我知道了</string>
+    <string name="to_look">去看看</string>
+    <string name="load_data_null">暂无数据</string>
+    <string name="please_waiting_now_downloading">正在下载，请稍候</string>
+    <string name="offline_data_empty">离线内容为空!</string>
+    <string name="connect_file_server_error">连接文件服务器失败！</string>
+    <string name="connect_server_error">连接服务器失败，请重试！</string>
+    <string name="download_n_data_complete">%1$s 下载完成</string>
+
+    <!--分享此刻-->
+    <string name="share_moment_content">我分享了一个时刻，请已购买者复制本消息后，打开随知APP浏览***%1$s***</string>
+    <string name="share_moment_code_copy">分享码已复制，直接粘贴发送给别人即可</string>
+    <string name="share_moment_new_open_ask">检测到新分享，是否立即打开？</string>
+    <string name="share_moment_download_ask">检测到您有分享尚未下载，是否立即开始下载？</string>
+    <string name="share_moment_download_complete">分享下载已完成，是否立即打开？</string>
+
+    <!-- download item -->
+    <string name="downloaditem_status_label">文件状态: </string>
+    <string name="downloaditem_packaging">文件正在打包，请您稍后尝试…</string>
+    <string name="downloaditem_batch_download">批量下载</string>
+    <string name="downloaditem_batch_delete">批量删除</string>
+    <string name="downloaditem_all_download">下载全部</string>
+    <string name="downloaditem_all_pause">全部暂停</string>
+    <string name="downloaditem_start">开始下载</string>
+    <string name="downloaditem_pause">暂停下载</string>
+    <string name="downloaditem_all_delete">删除全部</string>
+    <string name="downloaditem_select_delete">删除所选</string>
+    <string name="downloaditem_download">已下载</string>
+    <string name="downloaditem_undownload">未下载</string>
+
+    <!--文件列表-->
+    <string name="file_continuous_play">续播</string>
+    <string name="file_expired">该文件已过期</string>
+    <string name="file_expired_2">对不起，该文件已经过期</string>
+    <string name="file_ineffective">该文件未生效</string>
+    <string name="file_limit_device">版权方已禁止内容在本设备上打开，请尝试PC客户端或浏览器</string>
+
+    <!-- 搜索 -->
+    <string name="search_label_title">搜索</string>
+    <string name="search_label_local">本地文件</string>
+    <string name="search_label_hint">搜索课程、知识、经验、技能……</string>
+    <string name="search_empty">没有搜索到本地文件</string>
+    <string name="search_input_keyword">请输入搜索的关键字</string>
+    <string name="search_input_different">请输入不同的搜索关键字</string>
+    <string name="search_validity_1">有效期:%1$s至%2$s</string>
+    <string name="search_validity_2">有效期:限使用%1$s天</string>
+    <string name="search_validity_3">有效期:长期有效</string>
+    <string name="search_product_price">¥ %1$s</string>
+    <string name="search_product_free">免费</string>
+
+    <!--音乐定时-->
+    <string name="timer_shut_down">不开启</string>
+    <string name="timer_finish_current">播完当前声音</string>
+    <string name="timer_close_title">定时关闭</string>
+    <string name="timer_10_later">10分钟后</string>
+    <string name="timer_20_later">20分钟后</string>
+    <string name="timer_30_later">30分钟后</string>
+    <string name="timer_60_later">60分钟后</string>
+    <string name="timer_90_later">90分钟后</string>
+
+    <!--tip-->
+    <string name="file_read_verify_error">文件校验出错，无法阅读！</string>
+    <string name="file_read_miss_authority">没有权限阅读</string>
+
+    <!--登录-->
+    <string name="login_fail_disconnected">登录失败,无法连接服务器~</string>
+    <string name="register_fail_disconnected">注册失败,无法连接服务器</string>
+    <string name="register_device_fail">注册设备失败</string>
+</resources>

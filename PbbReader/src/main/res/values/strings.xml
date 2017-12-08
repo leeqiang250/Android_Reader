@@ -1,0 +1,213 @@
+<resources>
+
+    <!--<string name="app_name">PBB Reader</string>-->
+    <string name="app_name">鹏保宝</string>
+    <string name="privacy">使用条款和隐私政策</string>
+    <string name="cmp_name">北京创世泰克科技股份有限公司    版权所有</string>
+    <string name="app_update_url">http://www.pyc.com.cn/AppUpdate/pbbreader/updateinfo.txt</string>
+    <string name="open_pbb">打开.pbb文件</string>
+    <string name="msg_camera_framework_bug">抱歉，Android相机出现问题。您可能需要重启设备。</string>
+    <!-- XListView -->
+    <string name="xlistview_header_hint_normal">下拉可以刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新</string>
+    <string name="xlistview_header_hint_loading">正在刷新…</string>
+    <string name="xlistview_header_last_time">更新时间：</string>
+    <string name="xlistview_footer_hint_normal">上拉查看更多</string>
+    <string name="xlistview_footer_hint_loadmore">加载更多…</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="release_to_refresh">释放立即刷新</string>
+    <string name="refreshing">正在刷新…</string>
+    <string name="refresh_succeed">刷新成功</string>
+    <string name="refresh_fail">刷新失败</string>
+    <string name="pullup_to_load">上拉加载更多</string>
+    <string name="release_to_load">释放立即加载</string>
+    <string name="loading">正在加载…</string>
+    <string name="load_succeed">加载成功</string>
+    <string name="load_fail">加载失败</string>
+
+    <!-- pbbonline default -->
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="update">更新</string>
+    <string name="delete">删除</string>
+    <string name="close">关闭</string>
+    <string name="i_know">我知道了</string>
+    <string name="again">继续</string>
+    <string name="download">下载</string>
+    <string name="open">打开</string>
+    <string name="look">查看</string>
+    <string name="parser">解析</string>
+    <string name="wait">等待&#8230;</string>
+    <string name="connect">连接</string>
+    <string name="book_count">%1$s本图书</string>
+    <string name="music_count">%1$s首音乐</string>
+    <string name="video_count">%1$s个视频</string>
+    <string name="file_count">%1$s个文件</string>
+    <string name="net_subType_s">当前使用%1$s网络</string>
+    <string name="downloaded_tip">%s%%</string>
+    <string name="mine_content_s_offline">%1$s(离线)</string>
+
+    <!-- 提示语 -->
+    <string name="empty">空空如也&#8230;</string>
+    <string name="network_not_available">网络无连接</string>
+    <string name="network_check_available">网络无法连接，请检查您的网路设置</string>
+    <string name="load_server_failed">请求服务器失败</string>
+    <string name="connect_server_failed">连接服务器失败</string>
+    <string name="getdata_failed">加载数据失败</string>
+    <string name="load_data_empty">暂无数据</string>
+    <string name="disable_sd_card">SD卡不可用！</string>
+    <string name="please_waiting">请稍候&#8230;</string>
+    <string name="loading_waiting">载入中&#8230;</string>
+    <string name="getdata">获取最新数据</string>
+    <string name="parserdata_failed">加载数据异常或错误</string>
+    <string name="shared_lose_efficacy">分享被收回或已失效</string>
+    <string name="shared_lose_s_efficacy">%1$s已被收回或已失效</string>
+    <string name="shared_link_empty">分享链接为空</string>
+    <string name="connect_net_download">暂无内容，可连网去下载</string>
+    <string name="please_waiting_now_parser">正在解析文件,请您稍候!</string>
+    <string name="please_waiting_now_checking">正在验证,请您稍候!</string>
+    <string name="refresh_loading_waiting">正在更新，请稍候~</string>
+    <string name="send_msg_code_success">短信验证码发送成功,注意接收</string>
+    <string name="send_msg_code_failed">获取短信验证码失败</string>
+    <string name="send_code_failed">获取验证码失败</string>
+
+    <!-- 下载状态相关  !-->
+    <string name="Connecting">连接中&#8230;</string>
+    <string name="Wait_checking">等待验证</string>
+    <string name="Checking">正在验证</string>
+    <string name="Parsering">正在解析</string>
+    <string name="Packaging">正在打包</string>
+    <string name="Waiting">等待下载</string>
+    <string name="Downloading">正在下载&#8230;</string>
+    <string name="unDownloaded">未下载</string>
+    <string name="Being_parsed">正在解析请稍后再关闭</string>
+    <string name="Pause">暂停</string>
+    <string name="Pause_download">暂停下载</string>
+    <string name="Fail">下载异常</string>
+    <string name="No_download">未下载</string>
+    <string name="Connect_fail">连接失败</string>
+    <!-- 状态 -->
+    <string name="scaning_again">请重新扫描&#8230;</string>
+    <string name="empty_scaning_again">请返回重新扫描</string>
+    <string name="scan_failed">抱歉,扫描失败&#8230;</string>
+    <string name="please_waiting_n_download">%1$d个任务正在下载，再等会儿吧</string>
+    <string name="the_last_page">已经是最后一页了~</string>
+    <string name="download_n_finished">%1$s 下载完成</string>
+    <string name="video_ower">作者：</string>
+    <string name="video_format">格式：</string>
+    <string name="video_length">时长：</string>
+
+    <!-- jpush tips -->
+    <string name="jpush_message_tips">您的分享有更新了，点击刷新</string>
+    <string name="jpush_notify_new">收到新分享</string>
+    <string name="jpush_notify_revoke">内容已被收回</string>
+    <string name="jpush_notify_update">内容已更新</string>
+
+    <!-- MuPDF -->
+    <string name="title_lable">列表</string>
+    <string name="content_title_lable">内容列表</string>
+    <string name="directory_lable">目录</string>
+    <string name="bookmark_lable">书签</string>
+    <string name="directory_bookmark_lable">目录·书签</string>
+    <string name="delete_bookmarks">删除书签</string>
+    <string name="empty_bookmark">清空书签</string>
+    <string name="edit_bookmarks">编辑书签</string>
+    <string name="add_bookmarks_success">书签添加成功！</string>
+    <string name="bookmarks_exist">书签已经存在！</string>
+    <string name="bookmarks_er_because_unkey">没有阅读权限,无法添加书签。</string>
+    <string name="need_password">需要密码!</string>
+    <string name="read_miss_private_key">没有阅读权限！</string>
+    <string name="page_n">第%1$d页</string>
+    <string name="page_total">共%1$d页</string>
+    <string name="have_read_add_bookmark">可在阅读时添加书签</string>
+    <string name="have_not_outline">此文件没有目录~</string>
+    <string name="user_back">返回</string>
+    <string name="user_loginout">注销</string>
+    <string name="user_me">我</string>
+    <string name="user_account">账号</string>
+    <string name="user_clear_cache">一键清空</string>
+    <string name="user_check_update">检查更新</string>
+    <string name="app_about_tip">关于我们</string>
+    <string name="clear_must_pause">请您先暂停下载任务，再清除。</string>
+    <string name="please_waiting_n_update_download">%1$d个任务正在更新，请稍等！</string>
+    <string name="download_n_task_to_handle">您有%1$d条下载任务未完成，赶快去下载吧</string>
+    <string name="download_1_task_to_handle">《%1$s》下载还未完成，是否继续？</string>
+    <string name="title_pdf">PDF列表</string>
+    <string name="title_music">音乐列表</string>
+    <string name="title_video">视频列表</string>
+    <string name="play_working">正在播放</string>
+    <string name="play_miss_authority">没有播放权限!</string>
+    <string name="_ower">作者：</string>
+    <string name="_format">格式：</string>
+    <string name="_length">时长：</string>
+    <string name="play_random">随机播放</string>
+    <string name="play_single_cycle">单曲循环</string>
+    <string name="play_list_cycle">列表循环</string>
+
+    <!-- usersetting -->
+    <string name="ask_clear_local_content">确定要清空已下载内容吗 ?</string>
+    <string name="clear_can_reloaded">清空后可重新下载</string>
+    <string name="clear_working">正在清除</string>
+    <string name="loginout_ask_now">注销当前的账户?</string>
+    <string name="delete_history">确定删除“%1$s”此条记录？\n已下载文件也会删除</string>
+    <string name="delete_localfile">确定要删除已下载的文件？\n删除后可重新下载</string>
+    <string name="delete_localfile_success">成功删除本地文件!</string>
+    <string name="delete_share">您确定要删除该分享？\n删除后,该分享已下载文件也会删除</string>
+    <!-- online 2.x -->
+    <string name="sharepeople">分享人: </string>
+    <string name="Postscript">附&#160;&#160;&#160;&#160;言: </string>
+    <string name="equipment">设&#160;&#160;&#160;&#160;备: </string>
+    <string name="timelimit">时&#160;&#160;&#160;&#160;限: </string>
+    <string name="visible">1</string>
+    <string name="gone">0</string>
+    <string name="downloading_please">正在下载中，请稍候</string>
+    <string name="parsering_please">正在解析中，请稍候</string>
+    <string name="effective_longtime">长期有效</string>
+    <string name="unlimmit">不限</string>
+    <string name="first_bind_n_day">从第一次绑定起计%1$s天</string>
+    <string name="unit_n_stage">%1$s&#160;台</string>
+    <string name="checking">正在验证&#8230;</string>
+    <string name="binding">正在绑定&#8230;</string>
+    <string name="receiving">领取分享中&#8230;</string>
+    <string name="ask_bind_device">您确定要绑定当前设备吗？</string>
+    <string name="bind">绑定</string>
+    <string name="bind_device_success">绑定成功</string>
+    <string name="bind_device_fail">绑定设备失败</string>
+    <string name="receive_share_fail">领取分享失败</string>
+    <string name="receive_share_success">领取分享成功</string>
+    <string name="shared_invalid_by_tkcode">该分享不存在，请使用正确的短码</string>
+    <string name="shared_surplus_n_table">剩余%1$d台</string>
+
+    <!-- shared delete -->
+    <string name="select_delete_item">请选择要删除的记录</string>
+    <string name="ask_delete_n_item">确定删除选中的%1$d项记录吗？</string>
+    <string name="now_delete_item">正在删除&#8230;</string>
+    <string name="now_delete_n_item">正在删除(%1$d	/%2$d)</string>
+    <string name="now_clear_item_percent">正在清除</string>
+    <string name="delete_success">删除成功！</string>
+    <string name="clear_success">清空成功！</string>
+    <string name="delete_fail">删除失败！</string>
+    <string name="identity_verify">身份验证</string>
+
+    <!-- download file -->
+    <string name="link_exception_error">下载链接错误,请稍后重试！</string>
+    <string name="connect_file_server_error">连接文件服务器失败！</string>
+    <string name="please_pause_n_download">当前%1$d个任务正在下载，请暂停继续</string>
+    <string name="download_tips">运营商网络下,下载会产生流量费.</string>
+    <string name="download_ask_ok">您确定下载?</string>
+    <string name="fail_to_open_file">本地资源不存在或已经损坏，请尝试清除缓存或退出后重新打开。</string>
+    <string name="msg_file_not_find">本地文件没有找到</string>
+
+    <!-- file downlaod -->
+    <string name="downloaditem_status_lable">文件状态: </string>
+    <string name="downloaditem_no">未下载</string>
+    <string name="downloaditem_yeah">已下载</string>
+    <string name="downloaditem_packaging">文件正在打包，请您稍后…</string>
+    <string name="downloaditem_all">全部下载</string>
+    <string name="downloaditem_cancel">全部取消</string>
+    <string name="downloaditem_exception">文件下载链接异常，请稍后重试~</string>
+    <string name="downloaditem_lose_efficacy">文件已被收回</string>
+
+</resources>

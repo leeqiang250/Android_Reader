@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_popwindow"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/xap_ll_sweep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_selector_lt_rt_coners"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_sweep"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:minEms="4"
+            android:text="扫一扫"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/xap_serisModeLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/xap_ll_sieris_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_selector_lt_rt_coners"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_sieris"/>
+
+        <TextView
+            android:id="@+id/xap_txt_serise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:minEms="4"
+            android:text="系列显示"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/xap_open_folder_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/xap_open_folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_selector_lb_rb_coners"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="9dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_folder"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:minEms="4"
+            android:text="浏览文件"
+            android:textColor="@color/black_bb"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/xap_edit_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/xap_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_selector_lb_rb_coners"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_edits"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/xap_txt_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:minEms="4"
+            android:text="编 辑"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/light_gray"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/xap_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/xml_selector_lb_rb_coners"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="9dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_about"
+            android:gravity="center_vertical"
+            android:text="   关 于"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

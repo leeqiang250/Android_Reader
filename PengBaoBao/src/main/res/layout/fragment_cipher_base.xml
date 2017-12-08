@@ -1,0 +1,143 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:clickable="true" >
+
+    <RelativeLayout
+        android:id="@+id/lyt1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_color_green" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick" />
+
+        <TextView
+            android:id="@+id/fcb_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/big" />
+
+        <ToggleButton
+            android:id="@+id/fcb_tbn_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/xml_oprete"
+            android:textColor="@color/green"
+            android:textOff="操作"
+            android:textOn="取消"
+            android:textSize="@dimen/big" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/fcb_lyt_date_chosen"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/lyt1"
+        layout="@layout/include_date_chosen" />
+
+    <com.qlk.util.widget.PullRefreshView
+        android:id="@+id/pull_down_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fcb_lyt_date_chosen"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/fcb_lsv_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:listSelector="@drawable/xml_transparent_gray"
+            android:visibility="gone" />
+
+        <GridView
+            android:id="@+id/fcb_grv_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="1dp"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:horizontalSpacing="1dp"
+            android:listSelector="@drawable/xml_transparent_gray"
+            android:numColumns="3"
+            android:verticalSpacing="1dp"
+            android:visibility="gone" />
+    </com.qlk.util.widget.PullRefreshView>
+
+    <ViewStub
+        android:id="@+id/fcb_lyt_empty"
+        android:layout_width="265dp"
+        android:layout_height="117dp"
+        android:layout_centerInParent="true"
+        android:layout="@layout/view_empyt_pulldown" />
+
+    <ViewAnimator
+        android:id="@+id/fcb_lyt_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/top_color_green"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/fcb_imb_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_takephoto_bottom" />
+
+            <ImageButton
+                android:id="@+id/fcb_imb_encrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_scancode_bottom" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/fcb_imb_decrypt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_decrypt" />
+
+            <ImageButton
+                android:id="@+id/fcb_imb_sm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_makesm" />
+
+            <ImageButton
+                android:id="@+id/fcb_imb_transmit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/xml_export" />
+        </LinearLayout>
+    </ViewAnimator>
+
+</RelativeLayout>

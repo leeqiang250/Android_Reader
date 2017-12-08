@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示信息"
+        android:textColor="@color/green"
+        android:textSize="@dimen/big" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/divider_main" />
+
+    <TextView
+        android:id="@+id/dd_txt_content"
+        style="@style/black_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/green_white_xbig"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="关闭"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/dd_btn_sure"
+            style="@style/green_white_big"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="关闭" />
+
+        <Button
+            style="@style/green_white_xbig"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="关闭"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+</LinearLayout>

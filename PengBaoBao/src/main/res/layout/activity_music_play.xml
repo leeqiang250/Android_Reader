@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/musicRL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/music_default_bg">
+
+    <include
+        android:id="@+id/music_top_bar"
+        layout="@layout/pbbonline_music_title_bar"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/indicator_square"
+        android:layout_below="@id/music_top_bar"
+        android:layout_gravity="center_horizontal"/>
+
+    <cn.com.pyc.pbbonline.widget.RoundCornerIndicaor
+        xmlns:rci="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/indicator_square"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/music_bottom_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10.0dp"
+        android:layout_marginTop="15.0dp"
+        rci:rci_cornerRadius="4dp"
+        rci:rci_gap="6dp"
+        rci:rci_height="5dp"
+        rci:rci_selectColor="@color/brilliant_blue"
+        rci:rci_unselectColor="@color/white"
+        rci:rci_width="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/music_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/currTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/progressSeekBar"
+                android:layout_alignParentLeft="true"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:paddingBottom="12.0dp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="12.0sp"/>
+
+            <TextView
+                android:id="@+id/totalTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/progressSeekBar"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="12.0dp"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="12.0sp"/>
+
+            <SeekBar
+                android:id="@+id/progressSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5.0dp"
+                android:layout_marginRight="5.0dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_toLeftOf="@id/totalTimeTextView"
+                android:layout_toRightOf="@id/currTimeTextView"
+                android:maxHeight="@dimen/seekbar_height"
+                android:minHeight="@dimen/seekbar_height"
+                android:progressDrawable="@drawable/seekbar_circle_progress"
+                android:thumb="@drawable/seekbar_circle_thumb"
+                android:thumbOffset="0.0dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80.0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <cn.com.pyc.widget.HighlightImageView
+                    android:id="@+id/prompt_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_sequence"/>
+
+                <TextView
+                    android:id="@+id/prompt_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="循环"
+                    android:textColor="@color/white"
+                    android:textSize="12.0sp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <!--播放暂停按钮-->
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/play_pause_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_pause"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <cn.com.pyc.widget.HighlightImageView
+                    android:id="@+id/timer_btn"
+                    android:layout_width="41dp"
+                    android:layout_height="41dp"
+                    android:cropToPadding="true"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_timer"/>
+
+                <TextView
+                    android:id="@+id/timer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp"
+                    android:clickable="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="12.0sp"/>
+            </LinearLayout>
+
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/prev_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dip"
+                android:layout_toLeftOf="@id/play_pause_btn"
+                android:src="@drawable/ic_prev"/>
+
+
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/next_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/play_pause_btn"
+                android:src="@drawable/ic_next"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+   <!-- <include
+        layout="@layout/share_moment_view"/>-->
+
+</RelativeLayout>

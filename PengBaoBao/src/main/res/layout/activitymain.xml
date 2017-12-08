@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/function_bg">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_color_green">
+
+        <cn.com.pyc.widget.HighlightImageView
+            android:id="@+id/am_imb_user"
+            android:layout_width="28.0dp"
+            android:layout_height="28.0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="12dp"
+            android:clickable="true"
+            android:src="@drawable/ic_user_main"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="PBB Reader"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/am_tv_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="12dp"
+            android:clickable="true"
+            android:text="充值"
+            android:textColor="@color/selector_text_white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/am_btn_makefile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/xml_jiamiseletor" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fg_main"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_designs"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_10dp"
+                android:textColor="#a6a6a0"
+                android:background="@drawable/xml_main_greybutton"
+                android:text="设计稿" />
+
+            <Button
+                android:id="@+id/btn_id_card"
+                android:layout_width="160dp"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_10dp"
+                android:textColor="#a6a6a0"
+                android:background="@drawable/xml_main_greybutton"
+                android:text="身份证/银行卡" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_agreement"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_10dp"
+                android:background="@drawable/xml_main_greybutton"
+                android:textColor="#a6a6a0"
+                android:text="合同/票据" />
+
+            <Button
+                android:id="@+id/btn_personal_photo"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_10dp"
+                android:textColor="#a6a6a0"
+                android:background="@drawable/xml_main_greybutton"
+                android:text="私人照片" />
+
+            <Button
+                android:id="@+id/btn_other"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_margin="@dimen/_10dp"
+                android:textColor="#a6a6a0"
+                android:background="@drawable/xml_main_greybutton"
+                android:text="其他" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/am_btn_readfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/xml_readseletor"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:layout_above="@id/am_btn_readfile"
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/_10dp"
+        android:background="#E6EDE6" />
+</RelativeLayout>

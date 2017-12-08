@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC" >
+
+    <FrameLayout
+        android:id="@+id/arp_lyt_render"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/arp_lyt_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/title_top_color" >
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/ic_back"
+                android:onClick="onBackButtonClick" />
+
+            <ImageButton
+                android:id="@+id/arp_imb_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/xml_pdf_search" />
+
+            <ImageButton
+                android:id="@+id/arp_imb_outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@id/arp_imb_search"
+                android:background="@drawable/xml_pdf_outline"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/arp_imb_jump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
+                android:layout_toLeftOf="@id/arp_imb_outline"
+                android:background="@drawable/xml_pdf_jump" />
+
+            <cn.com.pyc.widget.MarqueeText
+                android:id="@+id/arp_txt_title"
+                style="@style/white_xbig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/arp_imb_jump"
+                android:layout_toRightOf="@id/back"
+                android:gravity="center" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/arp_lyt_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/arp_lyt_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/arp_txt_complete"
+                    style="@style/black_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="完成" />
+
+                <LinearLayout
+                    android:id="@+id/arp_lyt_search_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/arp_imb_search_previous"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/xml_imb_green"
+                        android:text="上一个" />
+
+                    <Button
+                        android:id="@+id/arp_imb_search_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/xml_imb_green"
+                        android:text="下一个" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <cn.com.pyc.widget.PycAutoText
+                android:id="@+id/arp_edt_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@id/arp_lyt_1"
+                android:hint="请输入搜索内容"
+                android:maxLength="10"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/arp_lyt_jump"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/arp_txt_jump"
+                style="@style/black_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="跳转" />
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/arp_edt_jump"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_toLeftOf="@id/arp_txt_jump"
+                android:inputType="number"
+                android:maxLength="10"
+                android:singleLine="true" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/arp_txt_countdown"
+        style="@style/white_big"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/arp_lyt_top"
+        android:background="@drawable/countdown_gray"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/arp_txt_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:shadowColor="@color/white"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

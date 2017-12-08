@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:scb="http://schemas.android.com/apk/res-auto" >
+
+    <RelativeLayout
+        android:id="@+id/rel_index_edit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFFFF"
+        android:visibility="gone" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="#d7d7d7" />
+
+        <cn.com.pyc.pbbonline.widget.SmoothCheckBox
+            android:id="@+id/allselect_checkbox"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:focusable="false"
+            scb:color_checked="@color/title_top_color"
+            scb:color_tick="@color/white"
+            scb:color_unchecked="@color/bg_color"
+            scb:color_unchecked_stroke="#d7d7d7"
+            scb:duration="80"
+            scb:stroke_width="1.0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/allselect_checkbox"
+            android:text="全选"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <cn.com.pyc.widget.HighlightImageView
+            android:id="@+id/delete_select_imge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="14dp"
+            android:paddingRight="16dp"
+            android:src="@android:drawable/ic_menu_delete" />
+    </RelativeLayout>
+
+</merge>

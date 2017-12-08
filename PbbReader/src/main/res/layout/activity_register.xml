@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/pbbonline_title_common_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="注册登录后可领取所有文件"
+                android:textSize="18sp" />
+
+            <cn.com.pyc.widget.PycUnderLineTextView
+                android:id="@+id/ar_utv_old_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:padding="3dp"
+                android:gravity="center_horizontal"
+                android:text="老用户点此登录"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:paddingTop="10dp" >
+
+                <cn.com.pyc.widget.PycEditText
+                    android:id="@+id/ar_edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="请输入11位手机号"
+                    android:inputType="phone"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <cn.com.pyc.widget.PycEditText
+                        android:id="@+id/ar_edt_security"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.55"
+                        android:hint="填写验证码"
+                        android:inputType="number"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:id="@+id/ar_btn_get_security"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.45"
+                        android:background="@drawable/xml_imb_green"
+                        android:padding="5dp"
+                        android:text="获取验证码"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <cn.com.pyc.widget.PycPsdEditText
+                    android:id="@+id/ar_edt_psd_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:hint="设置密码"
+                    android:textSize="18sp" />
+
+                <cn.com.pyc.widget.PycPsdEditText
+                    android:id="@+id/ar_edt_psd_conform"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="确认密码"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/al_tv_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+              />
+
+            <com.sz.view.widget.FlatButton
+                android:id="@+id/ar_btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/confirm"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                fbutton:buttonColor="@color/title_top_color"
+                fbutton:cornerRadius="4dp"
+                fbutton:shadowEnabled="false" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

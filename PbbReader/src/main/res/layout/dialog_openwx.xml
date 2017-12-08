@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/weixin"
+        android:gravity="center_vertical"
+        android:text="即将打开微信"
+        android:textColor="@color/green"
+        android:textSize="@dimen/big" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_main" />
+
+    <TextView
+        style="@style/white_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:text="请在微信公众号搜索 “鹏保宝” 添加关注！【微信客服】" />
+
+    <Button
+        android:id="@+id/do_btn_know"
+        style="@style/green_white_xbig"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="我知道了" />
+
+    <CheckBox
+        android:id="@+id/do_cbx_notprompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        style="@style/black_middle"
+        android:button="@drawable/xml_cbx_white"
+        android:gravity="center_vertical"
+        android:text="不再提示" />
+
+</LinearLayout>

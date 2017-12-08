@@ -1,0 +1,198 @@
+<resources>
+    <style name="AppBaseTheme" parent="android:Theme.DeviceDefault.Light">
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="black_big">
+        <item name="android:textSize">@dimen/big</item>
+        <item name="android:textColor">@color/black_bb</item>
+    </style>
+
+    <style name="black_xbig">
+        <item name="android:textSize">@dimen/xbig</item>
+        <item name="android:textColor">@color/black_bb</item>
+    </style>
+
+    <style name="black_middle">
+        <item name="android:textSize">@dimen/middle</item>
+        <item name="android:textColor">@color/black_bb</item>
+    </style>
+
+    <style name="red_xbig">
+        <item name="android:textSize">@dimen/xbig</item>
+        <item name="android:textColor">@color/text_red</item>
+    </style>
+
+    <style name="green_big">
+        <item name="android:textSize">@dimen/big</item>
+        <item name="android:textColor">@color/text_pbb</item>
+    </style>
+
+    <style name="green_xbig">
+        <item name="android:textSize">@dimen/xbig</item>
+        <item name="android:textColor">@color/text_pbb</item>
+    </style>
+
+    <style name="white_big">
+        <item name="android:textSize">@dimen/big</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="white_xbig">
+        <item name="android:textSize">@dimen/xbig</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="white_black_xbig" parent="@style/black_xbig">
+        <item name="android:background">@drawable/xml_imb_white</item>
+    </style>
+
+    <style name="white_green_xbig" parent="@style/green_xbig">
+        <item name="android:background">@drawable/xml_imb_white</item>
+    </style>
+
+    <style name="green_white_xbig" parent="@style/white_xbig">
+        <item name="android:background">@drawable/xml_imb_green</item>
+    </style>
+
+    <style name="orange_gray_xbig">
+        <item name="android:background">@drawable/xml_white_btn</item>
+        <item name="textColor">@drawable/xml_text_color</item>
+    </style>
+
+    <style name="orange_black_xbig" parent="@style/black_xbig">
+        <item name="android:background">@drawable/xml_unregister_btn</item>
+    </style>
+
+    <style name="green_white_big" parent="@style/white_big">
+        <item name="android:background">@drawable/xml_imb_green</item>
+    </style>
+
+    <style name="light_green_white_big" parent="@style/white_xbig">
+        <item name="android:background">@drawable/xml_imb_light_green</item>
+    </style>
+
+    <style name="white_middle">
+        <item name="android:textSize">@dimen/middle</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="green_white_middle" parent="@style/white_middle">
+        <item name="android:background">@drawable/xml_imb_green</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="white_small">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="black_small">
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:textColor">@color/black_bb</item>
+    </style>
+
+    <style name="no_bkg_pyc" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="net_connect_dialog_main" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:height">80dp</item>
+        <item name="android:width">150dp</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@color/main_transparent</item>
+    </style>
+
+    <style name="XTheme" parent="android:Theme">
+        <item name="android:windowTitleStyle">@style/XWindowTitle</item>
+        <item name="android:windowTitleBackgroundStyle">@style/StatusBarBackground</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="XWindowTitle" parent="">
+        <item name="android:shadowColor">#BB000000</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="StatusBarBackground">
+        <item name="android:background">#778899</item>
+    </style>
+
+    <style name="ThemeActivity" parent="@android:style/Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="AnimationActivity" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <!-- 新 -->
+    <style name="Dialog_transparent" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="myTheme" parent="android:Theme">
+        <item name="android:windowAnimationStyle">@style/noAnimation</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="noAnimation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="add_popwindow_anim">
+        <item name="android:windowEnterAnimation">@anim/add_pop_show</item>
+        <item name="android:windowExitAnimation">@anim/add_pop_dismiss</item>
+    </style>
+
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="bottom_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/d_open</item>
+        <item name="android:windowExitAnimation">@anim/d_close</item>
+    </style>
+
+    <style name="CustomTopNotificationAnim">
+        <item name="@android:windowEnterAnimation">@anim/dd_menu_in</item>
+        <item name="@android:windowExitAnimation">@anim/dd_menu_out</item>
+    </style>
+
+</resources>

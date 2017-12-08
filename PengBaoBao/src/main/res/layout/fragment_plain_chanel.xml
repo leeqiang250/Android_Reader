@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/fpc_imb_takephoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xml_takephoto" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:gravity="center" >
+
+        <ImageButton
+            android:id="@+id/fpc_imb_scancode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xml_scancode" />
+    </RelativeLayout>
+
+</LinearLayout>

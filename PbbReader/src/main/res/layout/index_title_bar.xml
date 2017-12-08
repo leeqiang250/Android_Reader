@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_bar_height"
+                android:background="@color/title_top_color">
+
+    <cn.com.pyc.widget.HighlightImageView
+        android:id="@+id/index_leftimg"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_back"
+        android:visibility="visible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="阅读文件"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <!--暂时隐藏切换tab-->
+    <cn.com.pyc.widget.SegmentControl
+        xmlns:sc="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/index_segment_control"
+        android:layout_width="60dp"
+        android:layout_height="32.0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/index_leftimg"
+        android:textSize="18sp"
+        android:visibility="gone"
+        sc:colors="@color/white"
+        sc:cornerRadiuss="4dp"
+        sc:direction="horizon"
+        sc:horizonGap="12dp"
+        sc:stroke_inner_width="0dp"
+        sc:stroke_outner_width="1.1dp"
+        sc:textSelectedColors="@color/title_top_color"
+        sc:texts="PBB|Online"
+        sc:verticalGap="1dp"/>
+
+    <cn.com.pyc.widget.HighlightImageView
+        android:id="@+id/index_rightimg"
+        android:layout_width="32.0dp"
+        android:layout_height="32.0dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="11dp"
+        android:scaleType="centerInside"
+        android:padding="4.0dp"
+        android:src="@drawable/icon_add1"
+        android:visibility="visible"/>
+
+</RelativeLayout>

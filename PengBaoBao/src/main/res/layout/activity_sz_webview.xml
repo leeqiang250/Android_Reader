@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_main_color"
+              android:orientation="vertical">
+
+    <include layout="@layout/pbbonline_title_common_bar"/>
+
+    <com.sz.view.widget.ProgressWebView
+        android:id="@+id/sz_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

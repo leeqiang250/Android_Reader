@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.com.pyc.suizhi.widget.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_lf_swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--删除按钮 #f93f25-->
+    <RelativeLayout
+        android:id="@+id/item_lf_del_layout"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/red">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_delete"/>
+    </RelativeLayout>
+
+    <!--item内容显示-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_light_bg_selector"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp">
+
+            <FrameLayout
+                android:id="@+id/item_lf_dn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/item_lf_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    tools:text="取消下载"/>
+
+                <cn.com.pyc.widget.HighlightImageView
+                    android:id="@+id/item_lf_download_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:padding="2dp"
+                    android:visibility="visible"
+                    android:src="@drawable/sz_download_button"/>
+
+                <Button
+                    android:id="@+id/item_lf_update_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:background="@drawable/xml_deep_stoken_btn"
+                    android:gravity="center"
+                    android:text="@string/update"
+                    android:textColor="#0277FF"
+                    android:textSize="12.0sp"
+                    android:visibility="gone"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/item_lf_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/item_lf_dn_layout"
+                android:gravity="left"
+                android:maxLines="2"
+                android:textColor="@color/black_bb"
+                android:textSize="16sp"
+                tools:text="回乡偶书回乡偶书回乡偶书"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="4dp">
+
+            <LinearLayout
+                android:id="@+id/item_lf_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:src="@drawable/ic_validate_time_nor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="@string/downloaditem_status_label"
+                    android:textColor="@color/gray"
+                    android:textSize="12.0sp"/>
+
+                <TextView
+                    android:id="@+id/item_lf_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/gray"
+                    android:textSize="12.0sp"
+                    tools:text="永久有效"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/item_lf_size_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/gray"
+                android:textSize="12.0sp"
+                android:visibility="visible"
+                tools:text="120M"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/item_lf_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1.0dp"
+            android:layout_marginTop="6dp"
+            android:max="100"
+            android:progressDrawable="@drawable/xml_item_progressbar"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color"/>
+    </LinearLayout>
+
+
+</cn.com.pyc.suizhi.widget.swipe.SwipeLayout>

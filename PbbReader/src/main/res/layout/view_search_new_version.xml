@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+
+    <TextView
+        android:id="@+id/searchTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:onClick="onSearchClick1"
+        android:padding="6dp"
+        android:text="搜索"
+        android:textColor="@color/gray_stroke"
+        android:textSize="@dimen/big"/>
+
+    <cn.com.pyc.widget.PycAutoTextGray
+        android:id="@+id/vsnv_edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/searchTxt"
+        android:hint="请输入搜索内容"
+        android:imeOptions="actionDone"
+        android:maxLength="10"
+        android:paddingLeft="5dp"
+        android:singleLine="true"/>
+
+</RelativeLayout>

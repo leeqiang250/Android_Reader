@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FEFEFE"
+              android:orientation="vertical">
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">-->
+
+    <include layout="@layout/pbbonline_title_common_bar"/>
+
+    <com.sz.view.widget.ProgressWebView
+        android:id="@+id/content_webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- </LinearLayout>-->
+
+    <!--
+    <LinearLayout
+         android:id="@+id/layout_bottom_bar"
+         android:layout_width="match_parent"
+         android:layout_height="44.0dp"
+         android:layout_alignParentBottom="true"
+         android:background="#eaeaea"
+         android:gravity="center_vertical"
+         android:orientation="horizontal"
+         android:weightSum="3">
+
+         <FrameLayout
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1">
+
+             <cn.com.pyc.widget.HighlightImageView
+                 android:id="@+id/img_goBack"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:src="@drawable/ie_arrow_normal"/>
+         </FrameLayout>
+
+         <FrameLayout
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1">
+
+             <cn.com.pyc.widget.HighlightImageView
+                 android:id="@+id/img_goForward"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:src="@drawable/ie_arrow1_normal"/>
+         </FrameLayout>
+
+         <FrameLayout
+             android:layout_width="0dp"
+             android:layout_height="match_parent"
+             android:layout_weight="1">
+
+             <cn.com.pyc.widget.HighlightImageView
+                 android:id="@+id/img_refreshPage"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:src="@drawable/ie_refresh_normal"/>
+         </FrameLayout>
+     </LinearLayout>
+     -->
+
+</LinearLayout>

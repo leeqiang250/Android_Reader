@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.qlk.util.widget.PullRefreshView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/ilv_lv_file"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/divider_main"
+            android:listSelector="@drawable/xml_item_gray" />
+    </com.qlk.util.widget.PullRefreshView>
+
+</LinearLayout>

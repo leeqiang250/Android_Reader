@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tv_error_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="访问数据失败,是否重新获取?"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/middle"/>
+
+    <Button
+        android:id="@+id/vsn_btn_connect"
+        android:layout_width="100dp"
+        android:layout_height="38.0dp"
+        android:layout_below="@+id/tv_error_prompt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/xml_sm_change_limit"
+        android:text="点击获取"
+        android:textColor="@color/white"
+        android:textSize="@dimen/middle"/>
+
+</RelativeLayout>

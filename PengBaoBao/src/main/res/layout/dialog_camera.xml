@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/square_main"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <ImageButton
+            android:id="@+id/da_btn_photo"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:paddingTop="5dp"
+            android:src="@drawable/xml_dailog_takephoto" />
+
+        <ImageButton
+            android:id="@+id/da_btn_video"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/transparent"
+            android:paddingTop="5dp"
+            android:src="@drawable/xml_dailog_takevideo" />
+
+        <ImageButton
+            android:id="@+id/da_btn_music"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="@color/transparent"
+            android:paddingTop="5dp"
+            android:src="@drawable/xml_dailog_record" />
+    </LinearLayout>
+
+</LinearLayout>

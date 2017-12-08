@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eaeaea"
+    android:orientation="vertical"
+    tools:context="cn.com.pyc.pcshare.DeviceScannerActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@drawable/circle_light_no_corner">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/xml_btn_back"
+            android:onClick="onBackButtonClick"
+            tools:contentDescription=""/>
+
+        <TextView
+            android:id="@+id/tv_local_ip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="当前IP: 127.0.0.0"/>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/device_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:cacheColorHint="#00000000"/>
+
+</LinearLayout>

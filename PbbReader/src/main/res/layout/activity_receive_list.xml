@@ -1,0 +1,235 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_pbb_online_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_pbb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ViewAnimator
+            android:id="@+id/arl_lyt_top"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/title_top_color"
+            android:visibility="gone">
+
+            <include
+                layout="@layout/view_sm_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:id="@+id/arl_lyt_search"
+                layout="@layout/view_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:id="@+id/arl_lyt_delete"
+                layout="@layout/view_sm_delete"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <include
+                android:id="@+id/arl_lyt_series"
+                layout="@layout/view_series_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </ViewAnimator>
+
+        <RelativeLayout
+            android:id="@+id/rl_send_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:layout_below="@id/arl_lyt_top"
+            android:background="@color/frame_bg">
+
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/send_back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_back"/>
+
+            <TextView
+                android:id="@+id/tv_send_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/opt_img"
+                android:layout_toRightOf="@id/send_back_img"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="已发送"
+                android:textColor="#ffffff"
+                android:textSize="18.0sp"/>
+
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/opt_img"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:padding="2dp"
+                android:scaleType="centerInside"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/arl_lyt_search"
+            layout="@layout/view_search_new_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_below="@id/rl_send_title"/>
+
+        <!--<com.qlk.util.widget.PullRefreshView-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/arl_imv_folder"
+            android:layout_below="@id/arl_lyt_search"
+            android:layout_margin="5dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/arl_lyt_pull_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                app:drag_ratio="0.4"
+                app:swipe_style="classic">
+
+                <include
+                    android:id="@id/swipe_refresh_header"
+                    layout="@layout/layout_classic_header"/>
+
+                <ExpandableListView
+                    android:id="@+id/swipe_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5.0dp"
+                    android:layout_marginRight="5.0dp"
+                    android:background="@color/transparent"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@null"
+                    android:dividerHeight="0dp"
+                    android:groupIndicator="@null"
+                    android:listSelector="@color/transparent"
+                    android:visibility="gone"/>
+
+                <include
+                    android:id="@id/swipe_load_more_footer"
+                    layout="@layout/layout_classic_footer"/>
+            </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+            <ListView
+                android:id="@+id/arl_lsv_series"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@color/transparent"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/arl_lyt_empty"
+            layout="@layout/view_empyt_pulldown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/arl_imv_folder"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/title_top_color"
+            android:onClick="onFolderClick"
+            android:src="@drawable/folder"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_dellete_bottom_veiw"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:background="#eaeaea"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_alignParentTop="true"
+                android:background="#d7d7d7"
+                android:visibility="visible"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:clickable="true"
+                android:onClick="onCancelClick"
+                android:padding="5dp"
+                android:text="取消"
+                android:textColor="@color/green"
+                android:textSize="@dimen/big"/>
+
+            <TextView
+                android:id="@+id/vsd_txt_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/green"
+                android:textSize="@dimen/big"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:onClick="onCompleteClick"
+                android:padding="5dp"
+                android:text="删除"
+                android:textColor="@color/green"
+                android:textSize="@dimen/big"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

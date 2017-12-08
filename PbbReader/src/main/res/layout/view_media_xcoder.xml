@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vmx_lyt_xcoder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/square"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/vmx_txt_title"
+        style="@style/black_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <ProgressBar
+        android:id="@+id/vmx_pb_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@id/vmx_txt_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@null"
+        android:progressDrawable="@drawable/xml_pb_normal" />
+
+    <TextView
+        android:id="@+id/vmx_txt_percent"
+        style="@style/black_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/vmx_pb_progress"
+        android:layout_below="@id/vmx_pb_progress"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:id="@+id/vmx_txt_size"
+        style="@style/black_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/vmx_pb_progress"
+        android:layout_below="@id/vmx_pb_progress"
+        android:layout_marginTop="5dp" />
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/fko_btn_qq"
+        style="@style/green_white_xbig"
+        android:layout_width="300dp"
+        android:layout_height="40.0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        android:text="QQ登录" />
+
+    <Button
+        android:id="@+id/fko_btn_email"
+        style="@style/light_green_white_big"
+        android:layout_width="300dp"
+        android:layout_height="40.0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:text="邮箱登录" />
+
+</LinearLayout>

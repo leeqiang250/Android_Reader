@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="对方如何打开："
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="35dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            android:text="记得告诉对方如何打开哦"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="否则他可能会抓狂的^-^"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+        <TextView
+            android:text="对方如何打开："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="1，安装APP：PBB Reader 发送链接"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+            <TextView
+                android:text=" 发送链接"
+                android:id="@+id/btn_sendurl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/green"
+                android:clickable="true"
+                android:textSize="15dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+        <TextView
+            android:text="2，安卓用户下载文件后去APP内刷新"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+        <TextView
+            android:text="3，苹果用户点击“用其他应用打开”,"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+        <TextView
+            android:text="       选择“拷贝至PBB Reader”"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+        android:background="@color/gray"
+        android:layout_marginTop="15dp"
+        android:layout_height="0.1dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textSize="20sp"
+            android:clickable="true"
+            android:textColor="@color/blue"
+            android:text="不再提醒" />
+        <TextView
+            android:id="@+id/btn_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/blue"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:text="告诉对方" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:clickable="true"
+        android:onClick="onCancelClick"
+        android:padding="5dp"
+        android:text="取消"
+        android:textColor="@drawable/xml_white_gray"
+        android:textSize="@dimen/big" />
+
+    <TextView
+        android:id="@+id/complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:clickable="true"
+        android:onClick="onCompleteClick"
+        android:padding="5dp"
+        android:text="搜索"
+        android:textColor="@color/gray_stroke"
+        android:textSize="@dimen/big" />
+
+    <cn.com.pyc.widget.PycAutoText
+        android:id="@+id/vs_edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:layout_toLeftOf="@id/complete"
+        android:layout_toRightOf="@id/cancel"
+        android:hint="请输入搜索内容"
+        android:imeOptions="actionSearch"
+        android:maxLength="10"
+        android:singleLine="true" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/toast_bg"
+    android:gravity="center"
+    android:padding="8dp" >
+
+    <ImageView
+        android:id="@+id/toast_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/toast_success" />
+
+    <TextView
+        android:id="@+id/toast_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="4dp"
+        android:layout_toRightOf="@id/toast_icon"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="收藏成功"
+        android:textColor="@color/color_4c4c4c"
+        android:textSize="14sp" />
+
+</RelativeLayout>

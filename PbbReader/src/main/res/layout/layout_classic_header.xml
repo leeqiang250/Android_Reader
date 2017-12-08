@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aspsine.swipetoloadlayout.ClassicRefreshHeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height" >
+
+        <LinearLayout
+            android:id="@+id/classic_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/classic_header_hint_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/xlistview_header_hint_normal" >
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/xlistview_header_last_time"
+                    android:textColor="#999999"
+                    android:textSize="10.0dp" />
+
+                <TextView
+                    android:id="@+id/classic_header_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="10.0dp"
+                    tools:text="刚刚" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/classic_header_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/classic_header_text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-90dp"
+            android:src="@drawable/pull_down" />
+
+        <com.sz.view.widget.AVLoadingIndicatorView
+            xmlns:avloading="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/classic_header_progressbar"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignLeft="@id/classic_header_text"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-90dp"
+            android:visibility="invisible"
+            avloading:indicator="BallSpinFadeLoader"
+            avloading:indicator_color="@color/title_top_color" />
+    </RelativeLayout>
+
+</com.aspsine.swipetoloadlayout.ClassicRefreshHeaderView>

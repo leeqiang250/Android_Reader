@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/xml_item_reader_files"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/rl_item_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+         />
+
+    <ImageView
+        android:id="@+id/item_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/arrows_green" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/item_arrow"
+        android:layout_toRightOf="@id/item_image"
+        android:orientation="vertical"
+        android:padding="3dp">
+
+        <TextView
+            android:id="@+id/arf_txt_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="如果没有你.mp3"
+            android:textColor="@color/item_title"
+            android:textSize="@dimen/big" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/arf_txt_author_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="梧桐叶落"
+                android:textColor="@color/item_nick"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/arf_txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2017-08-30"
+                android:textColor="@color/item_time"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/rl_item_body"
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#d7d7d7"/>
+
+</RelativeLayout>

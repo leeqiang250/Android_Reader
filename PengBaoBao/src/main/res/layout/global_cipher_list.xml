@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_cipher_top" />
+
+    <include layout="@layout/include_date_chosen" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include layout="@layout/include_listview" />
+
+        <include layout="@layout/include_cipher_bottom" />
+
+        <include layout="@layout/include_cipher_bottom2" />
+    </FrameLayout>
+
+</LinearLayout>

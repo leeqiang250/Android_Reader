@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:tag="lrc">
+
+    <cn.com.pyc.pbbonline.widget.WaveView
+        xmlns:suizhi_wave="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lrc_wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="60.0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@color/transparent"
+        suizhi_wave:above_wave_color="#CECECE"
+        suizhi_wave:blow_wave_color="#CECECE"
+        suizhi_wave:progress="80"
+        suizhi_wave:wave_height="middle"
+        android:visibility="gone"
+        suizhi_wave:wave_hz="normal"
+        suizhi_wave:wave_length="large"/>
+
+    <cn.com.pyc.suizhi.widget.lrc.LrcView
+        xmlns:lrc="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lrc_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        lrc:lrcAnimationDuration="1000"
+        lrc:lrcCurrentTextColor="@color/brilliant_blue"
+        lrc:lrcDividerHeight="24dp"
+        lrc:lrcLabel="暂无歌词"
+        lrc:lrcNormalTextColor="@color/white"
+        lrc:lrcPadding="16dp"
+        lrc:lrcTextSize="16sp"/>
+
+
+</RelativeLayout>

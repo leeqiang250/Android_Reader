@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_plain_top" />
+
+    <ListView
+        android:id="@+id/fpt_lsv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@drawable/divider_main"
+        android:listSelector="@drawable/xml_item_gray" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_main" />
+
+</LinearLayout>

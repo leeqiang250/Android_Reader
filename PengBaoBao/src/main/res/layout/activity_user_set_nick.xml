@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_gray"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_plain_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray_bg"
+        android:padding="10dp" >
+
+        <cn.com.pyc.widget.LoginEditText
+            android:id="@+id/auce_edt_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="请输入昵称" />
+
+        <TextView
+            android:id="@+id/fuce_txt_nick_prompt"
+            style="@style/black_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="如果你更改昵称，需要再次提交"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/auce_btn_set_nick"
+            style="@style/orange_black_xbig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="提交" />
+    </LinearLayout>
+
+</LinearLayout>

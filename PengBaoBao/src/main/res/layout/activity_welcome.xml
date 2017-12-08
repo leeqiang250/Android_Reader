@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg" >
+
+    <RadioGroup
+        android:id="@+id/aw_rdg_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/function1"
+            android:button="@null" />
+
+        <RadioButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/function0"
+            android:button="@null" />
+
+        <RadioButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/function0"
+            android:button="@null" />
+
+        <RadioButton
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/function0"
+            android:button="@null" />
+    </RadioGroup>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/aw_vpg_function"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/aw_rdg_function" />
+
+</RelativeLayout>

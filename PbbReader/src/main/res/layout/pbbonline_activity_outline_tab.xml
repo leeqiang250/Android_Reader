@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F2EC"
+    android:orientation="vertical" >
+
+    <include layout="@layout/pbbonline_title_common_bar" />
+
+    <com.indicators.view.indicator.ScrollIndicatorView
+        android:id="@+id/moretab_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/transparent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="#d3d3d3" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/moretab_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

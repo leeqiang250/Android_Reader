@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <!-- <Button
+        android:id="@+id/fk_btn_qq"
+        style="@style/green_white_xbig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:text="QQ登录" /> -->
+    
+    <Button
+        android:id="@+id/fk_btn_new_rigster"
+        style="@style/green_white_xbig"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:text="新用户注册" />
+    
+    <Button
+        android:id="@+id/fk_btn_old_user"
+        style="@style/green_white_xbig"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/fk_btn_new_rigster"
+        android:layout_margin="20dp"
+        android:text="老用户找回" />
+
+    <!-- <cn.com.pyc.widget.PycUnderLineTextView
+        android:id="@+id/fk_txt_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/fk_btn_qq"
+        android:layout_below="@id/fk_btn_qq"
+        android:text="注册新账号"
+        android:textSize="@dimen/middle" />
+
+    <cn.com.pyc.widget.PycUnderLineTextView
+        android:id="@+id/fk_txt_old_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/fk_btn_qq"
+        android:layout_below="@id/fk_btn_qq"
+        android:text="用户名登录"
+        android:textSize="@dimen/middle" /> -->
+
+</RelativeLayout>

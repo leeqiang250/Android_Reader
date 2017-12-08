@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_light_bg_selector"
+              android:orientation="vertical"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <cn.com.pyc.widget.MarqueeTextView
+            android:id="@+id/music_list_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            tools:text="南瓜精灵诗歌朗诵"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/music_list_name"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp">
+
+            <ImageView
+                android:id="@+id/music_list_img_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingTop="2dp"
+                android:src="@drawable/ic_validate_time_nor"/>
+
+            <TextView
+                android:id="@+id/music_list_text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_toRightOf="@id/music_list_img_status"
+                android:gravity="center"
+                tools:text="永久有效"
+                android:textColor="@color/gray"
+                android:textSize="14.0sp"/>
+        </RelativeLayout>
+
+        <com.sz.view.widget.AVLoadingIndicatorView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/music_list_working"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            app:indicator="LineScaleParty"
+            app:indicator_color="@color/brilliant_blue"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.3dp"
+        android:background="#553a3a3a"/>
+
+</LinearLayout>

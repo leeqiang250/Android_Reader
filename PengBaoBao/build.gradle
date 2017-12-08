@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+//读取签名证书的密码和名字
+def keystorePropertiesFile = rootProject.file("release-key/keystore.properties")
+def keystorePropeties = new Properties();
+keystorePropeties.load(new FileInputStream(keystorePropertiesFile));
+
+//命令行：gradlew assembleRelease
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+    defaultConfig {
+        //鹏保宝的信息（合并之前）
+        /*applicationId "cn.com.pyc"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 64
+        versionName '6.3.1'*/
+        //Reader的信息
+        applicationId "cn.com.pyc.pbb"
+        minSdkVersion 19
+        targetSdkVersion 21
+        versionCode 53
+        versionName '2.5.3'
+        multiDexEnabled true
+    }
+
+    //签名
+    signingConfigs {
+        releaseSign {
+            storeFile file(keystorePropeties['storeFile'])
+            storePassword keystorePropeties['storePassword']
+            keyAlias keystorePropeties['keyAlias']
+            keyPassword keystorePropeties['keyPassword']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.releaseSign
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            signingConfig signingConfigs.releaseSign
+        }
+    }
+
+    //配置打包出的apk名称eg:AppName_v2.3.5_201612121530-13服.apk
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            //def env = 'release'.equalsIgnoreCase(variant.buildType.name) ? "正式服" : "13服"
+            def apkName = 'PbbReader' + "_v${variant.versionName}" + "_${releaseTime()}" + "-${variant.buildType.name}" + '.apk'
+            def nName = output.outputFile.name.replace(output.outputFile.name, apkName)
+            output.outputFile = new File(output.outputFile.parent, nName)
+            //删除掉unaligned apk
+            if (output.zipAlign != null) {
+                output.zipAlign.doLast {
+                    output.zipAlign.inputFile.delete()
+                }
+            }
+        }
+    }
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+        //checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+
+    productFlavors {
+    }
+
+    dexOptions {
+        jumboMode true
+    }
+}
+
+//定义发布时间
+def releaseTime() {
+    return new Date().format("yyyyMMdd")
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/mta-sdk-1.0.0.jar')
+    compile files('libs/open_sdk.jar')
+    compile files('libs/alipaySingle-20170510.jar')
+    compile project(':PbbReader')
+    //compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.1.6'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+//    compile files('libs/alipaySdk-20170922.jar')
+    compile 'com.android.support:multidex:1.0.1'
+}

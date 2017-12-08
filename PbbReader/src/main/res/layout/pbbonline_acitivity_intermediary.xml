@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/intermediary_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在更新文件"
+        android:textColor="@color/gray"
+        android:textSize="16sp" />
+
+    <cn.com.pyc.pbbonline.widget.ProgressButton
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/intermediary_progress_btn"
+        android:layout_width="match_parent"
+        android:layout_height="12.0dp"
+        android:layout_margin="15dp"
+        app:progressbtn_backgroud_color="@color/title_top_color"
+        app:progressbtn_backgroud_second_color="#EEEEEE"
+        app:progressbtn_radius="2dp"
+        app:progressbtn_text_color="@color/title_top_color"
+        app:progressbtn_text_size="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="更新过程中，请勿终止！"
+        android:textColor="#99909090"
+        android:textSize="12sp" />
+
+</LinearLayout>

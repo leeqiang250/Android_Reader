@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xml_sm_item_group"
+    android:gravity="center_vertical"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/asg_imv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <ImageView
+        android:id="@+id/asg_imv_state"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/asg_imv_indicator" />
+
+    <CheckBox
+        android:id="@+id/asg_cbx_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/xml_cbx_white"
+        android:button="@null"
+        android:focusable="false"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/asg_cbx_check"
+        android:layout_toRightOf="@id/asg_imv_state"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/asg_txt_name"
+            style="@style/black_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:shadowColor="@color/white"
+            android:shadowDx="2"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:textSize="@dimen/big"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/asg_txt_summary"
+            style="@style/black_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/white"
+            android:shadowDx="2"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:layout_marginTop="2dp"
+            android:singleLine="true" />
+    </LinearLayout>
+
+</RelativeLayout>

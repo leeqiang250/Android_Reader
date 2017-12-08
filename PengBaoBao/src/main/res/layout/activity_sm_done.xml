@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/about_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/frame_bg">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="13dp"
+                android:background="@drawable/ic_back"
+                android:onClick="onBackButtonClick"/>
+
+            <TextView
+                style="@style/white_xbig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="发送.pbb文件"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/asd_txt_limit"
+            style="@style/black_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="70dp"
+            android:text="Ta在1天内能看5次"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="* Ta需要安装APP "
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/asd_txt_reader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="PBB Reader"
+                android:textColor="@color/green"
+                android:textSize="20dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/key_man"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/key_man_say"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/asd_txt_spread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="@color/black"/>
+
+                <cn.com.pyc.widget.PycUnderLineTextView
+                    android:id="@+id/asd_txt_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_weixin_send"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/xml_edit"
+            android:text="通过微信发送"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_qq_send"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/xml_edit"
+            android:text="通过QQ发送"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/apl_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:singleLine="true"
+                android:text="pbb_2017...."
+                android:textColor="@color/white"
+                android:textSize="@dimen/big"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_toRightOf="@id/apl_txt_name"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:singleLine="true"
+                android:text=".pbb"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="加密已完成，可以放心发给对方"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+
+        <Button
+            android:id="@+id/asd_btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/xml_click_btn"
+            android:text="发送文件"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xml_edit"
+            android:text="发送APP链接"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:ellipsize="middle"
+            android:gravity="center_horizontal"
+            android:text="对方需要PBB Reader打开.pbb文件"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:ellipsize="middle"
+                android:text="对方如何打开："
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:ellipsize="middle"
+                    android:text="1，安装APP：PBB Reader "
+                    android:textColor="@color/black"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:clickable="true"
+                    android:text="发送链接"
+                    android:textColor="@color/green"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:ellipsize="middle"
+                android:text="2，安卓用户下载文件后去APP内刷新"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:ellipsize="middle"
+                android:text="3，苹果用户点击“用其他应用打开”,"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:ellipsize="middle"
+                android:text="       选择“拷贝至PBB Reader”"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="*更多高级功能请使用PC版"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/btn_sendurl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:text="告诉对方如何打开"
+        android:textColor="@color/orange"
+        android:textSize="16dp"/>
+</RelativeLayout>

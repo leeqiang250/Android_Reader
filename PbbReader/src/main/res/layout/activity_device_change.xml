@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示信息"
+        android:textColor="@color/green"
+        android:textSize="@dimen/big" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/divider_main" />
+
+    <TextView
+        style="@style/black_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:text="不能阅读！与原阅读设备不符！是否在此设备上申请阅读？" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/adc_btn_yes"
+            style="@style/green_white_xbig"
+            android:layout_width="110dp"
+            android:layout_height="40.0dp"
+            android:text="是" />
+
+        <Button
+            android:id="@+id/adc_btn_no"
+            style="@style/white_green_xbig"
+            android:layout_width="110dp"
+            android:layout_height="40.0dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/xml_imb_white"
+            android:text="否" />
+    </LinearLayout>
+
+</LinearLayout>

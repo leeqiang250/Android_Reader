@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/apv_imv_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/video_play" />
+
+    <CheckBox
+        android:id="@+id/apv_cbx_check"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@id/apv_imv_video"
+        android:layout_alignTop="@id/apv_imv_video"
+        android:background="@drawable/xml_cbx_green"
+        android:button="@null"
+        android:focusable="false" />
+
+</RelativeLayout>

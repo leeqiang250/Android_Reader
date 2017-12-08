@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/light_gray_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/frame_bg">
+
+        <!-- 搜索栏 -->
+
+        <include layout="@layout/search_edit_layout"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search_empty_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12.0dp"
+        android:layout_marginTop="12.0dp"
+        android:text="@string/search_empty"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/search_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="12dp"
+        app:drag_ratio="0.4"
+        app:swipe_style="classic">
+
+        <!-- <include
+             android:id="@id/swipe_refresh_header"
+             layout="@layout/layout_classic_header"/>
+         -->
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"/>-->
+
+        <ListView
+            android:id="@id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/transparent"/>
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_classic_footer"/>
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+</LinearLayout>

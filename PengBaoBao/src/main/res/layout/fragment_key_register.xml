@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/function_bg"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <!-- nick -->
+
+    <LinearLayout
+        android:id="@+id/fkr_lyt_nick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <cn.com.pyc.widget.PycEditText
+            android:id="@+id/fkr_edt_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:hint="输入昵称（1-10位）"/>
+
+        <Button
+            android:id="@+id/fkr_btn_get"
+            style="@style/green_white_xbig"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="注册"/>
+    </LinearLayout>
+
+    <!-- password -->
+
+    <LinearLayout
+        android:id="@+id/fkr_lyt_password"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <cn.com.pyc.widget.PycPsdEditText
+            android:id="@+id/fkr_edt_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="创建账号密码（4—16位）"/>
+
+        <cn.com.pyc.widget.PycPsdEditText
+            android:id="@+id/fkr_edt_recreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:hint="确认账号密码（4—16位）"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <CheckBox
+                android:id="@+id/fkr_cbx_show"
+                style="@style/black_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:button="@drawable/xml_cbx_white"
+                android:gravity="center_vertical"
+                android:text="显示密码"
+                android:textColor="#a6000000"/>
+
+            <cn.com.pyc.widget.PycUnderLineTextView
+                android:id="@+id/fkr_txt_old_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="已有账号登录"
+                android:textSize="@dimen/big"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/fkr_btn_insert"
+            style="@style/green_white_xbig"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:text="进入"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="账号密码：用于进入“隐私空间”，请牢记！\n老用户：请使用“已有账号登录”，以便获取之前已加密的隐私文件"
+            android:textColor="@color/red"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="black">#A6000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green">#00A155</color>
+    <color name="gray_stroke">#bdbdbd</color>
+    <color name="light_blue">#ff33b5e5</color>
+    <color name="gray">#FF888888</color>
+
+    <!--改版3.0.0-->
+    <color name="pink">#F63F71</color>
+    <color name="orange">#E5CC89</color>
+
+</resources>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray_bg"
+    tools:context="cn.com.pyc.main.PbbFileDetailActivity">
+
+    <include
+        android:id="@+id/apfd_lyt_top"
+        layout="@layout/pbbonline_title_common_bar" />
+
+    <!--<RelativeLayout
+        android:id="@+id/apfd_lyt_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/title_top_color">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick"/>
+
+        <TextView
+            android:id="@+id/apfd_tv_fileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </RelativeLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/apfd_lyt_info"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/apfd_lyt_top"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:id="@+id/line_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/apfd_txt_maketime_title"
+                style="@style/black_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="制作时间：" />
+
+            <TextView
+                android:id="@+id/apfd_txt_maketime_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/apfd_txt_maketime_title"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/apfd_txt_maketime_title"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/apfd_txt_client"
+                    style="@style/black_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="制作于:"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/apfd_imb_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/xml_sm_item_send"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/apfd_imb_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5.0dp"
+                    android:background="@drawable/xml_sm_item_refresh" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/apfd_txt_serise_name"
+            style="@style/black_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="系列名称："
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/apfd_txt_orderno_title"
+                style="@style/black_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dp"
+                android:text="订单编号："
+                android:visibility="visible" />
+
+            <cn.com.pyc.widget.PycUnderLineBlueTextView
+                android:id="@+id/apfd_txt_orderno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/apfd_txt_orderno_title"
+                android:layout_marginTop="3.0dp"
+                android:layout_toRightOf="@id/apfd_txt_orderno_title"
+                android:clickable="true"
+                android:gravity="bottom"
+                android:textColor="@color/black"
+                android:textSize="@dimen/small"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/apfd_txt_orderno_title"
+                android:layout_marginTop="3.0dp">
+
+                <TextView
+                    android:id="@+id/apfd_txt_maker"
+                    style="@style/black_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="制作者：" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/apfd_txt_abort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="已被作者终止阅读"
+                android:textColor="@color/red"
+                android:textSize="@dimen/small"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/maker_say"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/apfd_txt_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|top"
+                android:lineSpacingExtra="2.0dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="3dp"
+                android:text="你懂的，直接看吧！"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_transparent"
+                android:textSize="@dimen/small" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <cn.com.pyc.widget.PycUnderLineOrangeTextView
+                    android:id="@+id/apfd_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/icon_shop"
+                    android:padding="4dp"
+                    android:text="浏览店铺"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/apfd_txt_single_open_time"
+            style="@style/black_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="打开时间：" />
+
+    </LinearLayout>
+
+    <ViewStub
+        android:id="@+id/apfd_lyt_net_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout="@layout/view_sm_neterror" />
+
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/apfd_lyt_info"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_marginTop="30dp"
+        android:text="能看几次："
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_count"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_days_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:text="能看多久："
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="剩余n天"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_singleTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_count"
+        android:layout_margin="@dimen/_10dp"
+        android:text="每次能看："
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/apfd_layout_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_days"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/apfd_btn_abort"
+            style="@style/white_big"
+            android:layout_width="120dp"
+            android:layout_height="40.0dp"
+            android:background="@drawable/xml_btn_red"
+            android:text="终止阅读"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/apfd_btn_active"
+            style="@style/green_white_big"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="激活与查询"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/apfd_btn_modify"
+            style="@style/white_big"
+            android:layout_width="120dp"
+            android:layout_height="40.0dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/xml_btn_yellow"
+            android:text="修改条件"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/apfd_btn_read"
+            style="@style/white_big"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/xml_click_btn"
+            android:text="阅读"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/view_empyt_pulldown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

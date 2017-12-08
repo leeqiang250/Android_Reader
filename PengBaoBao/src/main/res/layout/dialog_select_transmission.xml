@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        style="@style/black_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请您选择连接电脑的方式" />
+
+    <RadioGroup
+        android:id="@+id/dst_rdg_transmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/dst_rdb_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/xml_cbx_white"
+            android:checked="true"
+            style="@style/black_xbig"
+            android:text="WiFi" />
+
+        <RadioButton
+            android:id="@+id/dst_rdb_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            style="@style/black_xbig"
+            android:button="@drawable/xml_cbx_white"
+            android:text="蓝牙" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dst_btn_ok"
+            style="@style/green_white_xbig"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/dst_btn_cancel"
+            style="@style/white_green_xbig"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/xml_imb_white"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

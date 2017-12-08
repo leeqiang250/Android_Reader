@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/content_text_color"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/edit_bookmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_light_bg_selector"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="@string/edit_bookmarks"
+        android:textColor="@color/selector_labledit_textcolor"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@drawable/line_gray" />
+
+    <TextView
+        android:id="@+id/delete_bookmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_light_bg_selector"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="@string/delete_bookmarks"
+        android:textColor="@color/selector_labledit_textcolor"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@drawable/line_gray" />
+
+    <TextView
+        android:id="@+id/clear_bookmark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_light_bg_selector"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:text="@string/empty_bookmark"
+        android:textColor="@color/selector_labledit_textcolor"
+        android:textSize="16sp" />
+
+</LinearLayout>

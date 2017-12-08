@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/vep_lyt_empty"
+              android:layout_width="265dp"
+              android:layout_height="117dp"
+              android:layout_gravity="center"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:paddingLeft="10dp">
+
+    <TextView
+        android:id="@+id/vep_txt_bulletin"
+        style="@style/black_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="空空如也..."
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/vep_txt_prompt"
+        style="@style/black_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@drawable/no_read"
+        android:drawablePadding="20dp"
+        android:gravity="center"
+        android:text="可尝试下拉刷新试试"/>
+
+</LinearLayout>

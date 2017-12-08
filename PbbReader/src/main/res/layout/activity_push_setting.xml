@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/as_lyt_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/screen_small_top" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick" />
+
+        <TextView
+            style="@style/white_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="推送设置" />
+    </RelativeLayout>
+
+    <!-- 文章推送 -->
+
+    <RelativeLayout
+        android:id="@+id/aps_lyt_push_writings"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20sp"
+            android:text="文章推送" />
+
+        <CheckBox
+            android:id="@+id/aps_cbx_push_writings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <!-- 声音设置 -->
+
+    <RelativeLayout
+        android:id="@+id/aps_lyt_push_voice"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20sp"
+            android:text="声音震动" />
+
+        <CheckBox
+            android:id="@+id/aps_cbx_push_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:checked="true" />
+    </RelativeLayout>
+
+    <!-- 震动设置 -->
+
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/aps_lyt_push_zhen"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20sp"
+            android:text="震动" />
+
+        <CheckBox
+            android:id="@+id/aps_cbx_push_zhen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:checked="true" />
+    </RelativeLayout>
+    -->
+
+</LinearLayout>

@@ -1,0 +1,293 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/function_bg"
+              android:clickable="true"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="找回方式："/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="手机"/>
+
+            <RadioButton
+                android:id="@+id/radioEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="邮箱"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- 手机部分 -->
+
+    <LinearLayout
+        android:id="@+id/ll_phone_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!-- 输入手机 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="手机号码："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入11位手机号"
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <!-- 输入验证码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="输验证码："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_phone_security"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="填写验证码"
+                android:inputType="number"
+                android:maxLength="12"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/btn_get_phone_security"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/xml_imb_green"
+                android:padding="9dp"
+                android:text="获取验证码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middle"/>
+        </LinearLayout>
+        <!-- 输入新密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="输新密码："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_phone_newPsd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <!-- 确认新密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="确认密码："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_phone_newPsd_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_commit_phoneInfo"
+            style="@style/green_white_xbig"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="25dp"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <!-- 邮箱部分 -->
+
+    <LinearLayout
+        android:id="@+id/ll_email_part"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- 输入邮箱 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="输入邮箱："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入邮箱"/>
+        </LinearLayout>
+
+        <!-- 输入验证码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="输验证码："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_email_security"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="填写验证码"
+                android:inputType="number"
+                android:maxLength="12"
+                android:singleLine="true"/>
+
+            <Button
+                android:id="@+id/btn_get_email_security"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/xml_imb_green"
+                android:padding="8dp"
+                android:text="获取验证码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/middle"/>
+        </LinearLayout>
+        <!-- 输入新密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="输新密码："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_email_newPsd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <!-- 确认新密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="确认密码："/>
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/edt_email_newPsd_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:inputType="phone"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_commit_emailInfo"
+            style="@style/green_white_xbig"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:text="提交"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</LinearLayout>

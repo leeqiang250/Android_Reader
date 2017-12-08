@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_color_green" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick" />
+
+        <TextView
+            style="@style/white_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Ta能看？" />
+
+        <Button
+            android:id="@+id/afl_btn_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/xml_oprete"
+            android:text="制作"
+            android:textColor="@color/green"
+            android:textSize="@dimen/big" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/afl_txt_name"
+                style="@style/black_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:ellipsize="middle"
+                android:singleLine="true" />
+
+            <!-- count -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            >
+
+                <CheckBox
+                    android:id="@+id/afl_cbx_count"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/xml_cbx_white"
+                    android:checked="true"
+                    android:text="能看几次" />
+
+                <LinearLayout
+                    android:id="@+id/afl_lyt_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/afl_cbx_count"
+                    android:orientation="horizontal" >
+
+                    <cn.com.pyc.widget.PycEditText
+                        android:id="@+id/afl_edt_count"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="5"
+                        android:textSize="@dimen/small" />
+
+                    <TextView
+                        style="@style/black_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="次" />
+
+                    <TextView
+                        style="@style/black_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="(1～9999)"
+                        android:textColor="@color/gray_transparent" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/afl_txt_count_unlimited"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/afl_cbx_count"
+                    android:text=":  不限制"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- singleOpenTime -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <CheckBox
+                    android:id="@+id/afl_cbx_single_open_time"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/xml_cbx_white"
+                    android:checked="true"
+                    android:text="每次能看" />
+
+                <LinearLayout
+                    android:id="@+id/afl_lyt_single_open_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/afl_cbx_single_open_time"
+                    android:orientation="horizontal" >
+
+                    <cn.com.pyc.widget.PycEditText
+                        android:id="@+id/afl_edt_minite"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:hint="0～180"
+                        android:inputType="number"
+                        android:textSize="@dimen/small" />
+
+                    <TextView
+                        style="@style/black_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="分" />
+
+                    <cn.com.pyc.widget.PycEditText
+                        android:id="@+id/afl_edt_second"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:hint="0～59"
+                        android:inputType="number"
+                        android:text="10"
+                        android:textColorHint="@color/gray_stroke"
+                        android:textSize="@dimen/small" />
+
+                    <TextView
+                        style="@style/black_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:text="秒" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/afl_txt_single_unlimited"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/afl_cbx_single_open_time"
+                    android:text=":  不限制"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <!-- data -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" >
+
+                <CheckBox
+                    android:id="@+id/afl_cbx_data"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/xml_cbx_white"
+                    android:checked="true"
+                    android:text="能看多久" />
+
+                <TextView
+                    android:id="@+id/afl_txt_data_total"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/afl_cbx_data" />
+
+                <TextView
+                    android:id="@+id/afl_txt_data_unlimited"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/afl_cbx_data"
+                    android:text=":  不限制"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <TableLayout
+                android:id="@+id/afl_lyt_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <CheckBox
+                        style="@style/black_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/xml_cbx_white"
+                        android:checked="true"
+                        android:text="每次能看"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        style="@style/black_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="从" />
+
+                    <Button
+                        android:id="@+id/afl_btn_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/small" />
+
+                    <TextView
+                        style="@style/black_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="到" />
+
+                    <Button
+                        android:id="@+id/afl_btn_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/edit_text"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/small" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                style="@style/black_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:text="你对Ta说   (方便Ta联系你)" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q  Q: " />
+
+                <cn.com.pyc.widget.PycEditText
+                    android:id="@+id/afl_edt_qq"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="手机: " />
+
+                <cn.com.pyc.widget.PycEditText
+                    android:id="@+id/afl_edt_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="邮箱: " />
+
+                <cn.com.pyc.widget.PycEditText
+                    android:id="@+id/afl_edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/small" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txt_zhaiyao"
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="top|left"
+                    android:text="摘要: " />
+
+                <cn.com.pyc.widget.PycEditText
+                    android:id="@+id/afl_edt_describe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@id/txt_zhaiyao"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLength="200"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_transparent"
+                    android:textSize="@dimen/small" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

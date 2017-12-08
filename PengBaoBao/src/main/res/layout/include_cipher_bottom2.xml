@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/icb2_lyt_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@color/top_color_green"
+    android:clickable="true"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/icb_imb_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/xml_takephoto_bottom" />
+
+    <ImageButton
+        android:id="@+id/icb_imb_encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/xml_scancode_bottom" />
+
+</LinearLayout>

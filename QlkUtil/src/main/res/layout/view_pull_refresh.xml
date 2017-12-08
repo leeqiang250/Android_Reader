@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="10dp"
+              android:padding="5dp"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <ViewAnimator
+        android:id="@+id/vpr_van_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="6dp"
+            android:src="@drawable/pull_down"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:padding="6dp"
+            android:src="@drawable/lose_refresh"/>
+
+        <!-- Widget.ProgressBar.Small-->
+        <ProgressBar
+            style="@android:style/Widget.DeviceDefault.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"/>
+    </ViewAnimator>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vpr_txt_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/middle"/>
+
+        <TextView
+            android:id="@+id/vpr_txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/small"/>
+
+        <TextView
+            android:id="@+id/vpr_txt_fix"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+</LinearLayout>

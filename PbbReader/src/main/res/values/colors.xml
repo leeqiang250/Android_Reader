@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="yellow">#f8e400</color>
+    <color name="blue">#5CACEE</color>
+    <color name="lightblue">#bbdff5</color>
+    <color name="black">#6C6B6C</color>
+    <color name="gray">#7F7F7F</color>
+    <color name="gray_transparent">#887F7F7F</color>
+    <color name="gray_stroke">#bdbdbd</color>
+    <color name="green">#00A155</color>
+    <color name="weakgreen">#62BF7B</color>
+    <color name="green_deep">#387B41</color>
+    <color name="green_light">#4EBE6C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_ea">#EAFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="red_edit">#e56600</color>
+    <color name="text_red">#ff0000</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="gold">#b89766</color>
+    <color name="selector">#d7dfd9</color>
+    <color name="item_press">#ffffff</color>
+    <color name="item_no_press">#f5f5f5</color>
+    <color name="item_title">#333333</color>
+    <color name="item_nick">#3ab55a</color>
+    <color name="item_time">#999999</color>
+    <color name="main_transparent">#bb1d1d1d</color>
+    <color name="disabled">#9ddbae</color>
+    <color name="black_bb">#b9000000</color>
+
+    <!-- appmsg -->
+    <color name="alert">#DFCC0000</color>
+    <color name="confirm">#DFFF8800</color>
+    <color name="info">#DF669900</color>
+
+    <!-- scaning -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#00000000</color>
+    <color name="capture_text_cover_bg">#99535353</color>
+    <color name="seek_bar_text">#fff6f6f6</color>
+    <!-- scaning -->
+    <color name="remote_connect_text">#52AC62</color>
+    <color name="remote_disconnect_text">#8F151F</color>
+    <color name="function_bg">#f0eff4</color>
+    <color name="text_welcome">#646464</color>
+    <color name="text_pbb">#1eaa47</color>
+
+    <!-- MuPDF -->
+    <color name="canvas">#404040</color>
+    <color name="toolbar">#C0000000</color>
+    <color name="page_indicator">#C0202020</color>
+    <color name="busy_indicator">#C0202020</color>
+    <color name="button_normal">#00000000</color>
+    <color name="button_pressed">#FF2572AC</color>
+    <color name="text_border_normal">#000000</color>
+    <color name="text_border_pressed">#2572AC</color>
+    <color name="text_border_focused">#000000</color>
+    <color name="seek_thumb">#2572AC</color>
+    <color name="seek_progress">#FFFFFF</color>
+    <color name="tab_top_text_1">#AAA9A5</color>
+    <color name="tab_top_text_2">#37B75E</color>
+    <!-- 暗灰色 -->
+    <color name="dimgrey">#696969</color>
+    <!-- 主背景色 #F3F2EC -->
+    <color name="bg_color">#EAEAEA</color>
+
+    <!-- pbbonline default -->
+    <color name="touming">#00000000</color>
+    <color name="button_blue">#56c3ea</color>
+    <color name="button_dim_blue">#3156c3ea</color>
+    <color name="blue_bar_color">#4FBFE8</color>
+    <color name="content_text_color">#888782</color>
+    <color name="content_text_color_white">#FFFFFF</color>
+    <color name="video_bkg_lightdark">#201E1F</color>
+    <color name="color_4c4c4c">#4c4c4c</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="textview_light_gray">#c4c4c4</color>
+    <color name="textcolor">#ed6d48</color>
+    <color name="jpushview_bg_color">#ffe35c50</color>
+
+    <!-- 主题绿色 -->
+    <color name="title_top_color">#37B75E</color>
+    <!-- 进度环颜色 -->
+    <color name="round_color">#3156C3EA</color>
+    <!-- 进度颜色 #56C3EA -->
+    <color name="progress_color">#52A5FF</color>
+
+    <!--改版3.0.0-->
+    <color name="frame_bg">#424242</color>
+    <color name="orange">#e5cd88</color>
+    <color name="about_bg">#535353</color>
+    <color name="light_gray_bg">#CCCCCC</color>
+    <color name="orange_deep">#E5CC89</color>
+    <color name="divide">#8B8B8B</color>
+    <color name="search_item_bg">#606060</color>#606060
+</resources>

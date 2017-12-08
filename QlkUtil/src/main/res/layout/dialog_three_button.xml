@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/square"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dtb_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="11dp"
+        android:text="提示信息"
+        android:textColor="@color/light_blue"
+        android:textSize="@dimen/xbig" />
+
+    <ImageView
+        android:id="@+id/dtb_imv_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_blue" />
+
+    <FrameLayout
+        android:id="@+id/dtb_lyt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/dtb_txt_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/big" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/dtb_imv_divider0"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/dtb_lyt_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dtb_btn_negative"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/xml_transparent_gray"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/big" />
+
+        <ImageView
+            android:id="@+id/dtb_imv_divider1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/dtb_btn_normal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/xml_transparent_gray"
+            android:gravity="center"
+            android:text="正常"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/big" />
+
+        <ImageView
+            android:id="@+id/dtb_imv_divider2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.01"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/dtb_btn_positive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/xml_transparent_gray"
+            android:gravity="center"
+            android:text="确认"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/big" />
+    </LinearLayout>
+
+</LinearLayout>

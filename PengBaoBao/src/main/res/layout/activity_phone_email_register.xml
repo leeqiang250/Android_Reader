@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/function_bg"
+    android:clickable="true">
+    <!-- password -->
+
+    <LinearLayout
+        android:id="@+id/fkr_lyt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <cn.com.pyc.widget.PycEditText
+            android:id="@+id/per_edt_phone_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="手机号"/>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/per_edt_verification_code"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="验证码"/>
+            <Button
+                android:id="@+id/per_btn_verification_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:textSize="@dimen/xbig"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/gray"/>
+        </LinearLayout>
+        <cn.com.pyc.widget.PwdSwitchEditText
+            android:id="@+id/per_edt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:inputType="textPassword"
+            android:drawablePadding="5dp"
+            android:hint="密码"/>
+
+        <Button
+            android:id="@+id/per_btn_register"
+            style="@style/green_white_xbig"
+            android:layout_width="match_parent"
+            android:layout_height="40.0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="注册"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/fkr_cbx_show"
+                style="@style/black_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:button="@drawable/xml_cbx_white"
+                android:gravity="center_vertical"
+                android:text="显示密码"
+                android:textColor="#a6000000"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/per_phoneoremail_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:text="使用邮箱注册"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已有账号?"/>
+                <cn.com.pyc.widget.PycUnderLineTextView
+                    android:id="@+id/per_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即登录"
+                    android:textColor="#62BF7B"
+                    android:textSize="@dimen/big"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="账号密码：用于进入“隐私空间”，请牢记！\n老用户：请使用“已有账号登录”，以便获取之前已加密的隐私文件"
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray"
+                android:layout_height="0.5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/other_login"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/middle"
+                android:paddingRight="5dp"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/gray"
+                android:layout_height="0.5dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/qq_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qq_login"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

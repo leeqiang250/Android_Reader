@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_bg_selector"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/item_search_img"
+            android:layout_width="60.0dp"
+            android:layout_height="50.0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="#EAEAEA"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_file_pdf"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/item_search_img"
+            android:layout_alignTop="@id/item_search_img"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/item_search_img">
+
+            <TextView
+                android:id="@+id/item_search_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="儿歌三百首"
+                android:textColor="#434343"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/item_search_ower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:singleLine="true"
+                android:text="三藏精灵"
+                android:textColor="@color/title_top_color"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#d7d7d7"/>
+
+</LinearLayout>

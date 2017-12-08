@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/common_titlebar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@color/frame_bg" >
+
+    <cn.com.pyc.widget.HighlightImageView
+        android:id="@+id/back_img"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/opt_img"
+        android:layout_toRightOf="@id/back_img"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:singleLine="true"
+        tools:text="PBBOnline"
+        android:textColor="#ffffff"
+        android:textSize="18.0sp" />
+
+    <cn.com.pyc.widget.HighlightImageView
+        android:id="@+id/opt_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:padding="2dp"
+        android:scaleType="centerInside"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:background="@drawable/sz_white_corner_bg"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_pb_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="15dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="20.0sp"
+        tools:text="请稍候"/>
+
+    <TextView
+        android:id="@+id/dialog_pb_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:minHeight="70.0dip"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/black"
+        android:textSize="16.0sp"
+        tools:text="SDCard/PBBReader/PCShare/"/>
+
+    <ProgressBar
+        android:id="@+id/dialog_pb_progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:progressDrawable="@drawable/xml_progressbar"
+        tools:progress="10"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/dialog_pb_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0sp"
+            tools:text="10%"/>
+
+        <TextView
+            android:id="@+id/dialog_pb_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16.0sp"
+            tools:text="10M/100M"/>
+    </RelativeLayout>
+
+</LinearLayout>

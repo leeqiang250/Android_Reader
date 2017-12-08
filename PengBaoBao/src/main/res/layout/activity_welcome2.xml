@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/function_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="top">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/position_info"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="欢迎使用"
+                android:textColor="@color/text_welcome"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:text="PBB Reader"
+                android:textColor="@color/text_pbb"
+                android:textSize="35sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/aw_btn_new"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/xml_first_use"
+                android:text="快速试用"
+                android:textColor="@color/white"
+                android:textSize="24sp"/>
+        </LinearLayout>
+
+        <!-- divider -->
+
+        <!--<ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/divider1" android:id="@+id/imageView"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="你已经使用过鹏保宝了？"
+            android:textColor="@color/text_welcome"
+            android:textSize="20sp" />-->
+
+        <Button
+            android:id="@+id/aw_btn_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/xml_find_key"
+            android:text="已有账号登录"
+            android:textColor="@color/white"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+</LinearLayout>

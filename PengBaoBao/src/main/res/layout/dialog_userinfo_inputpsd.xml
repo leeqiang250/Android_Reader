@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:background="@color/dialog_bg"
+              android:padding="15dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="请输入密码"
+        android:textColor="@color/black"
+        android:textSize="@dimen/big"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider_main"/>
+
+
+    <cn.com.pyc.widget.PsdEditText
+        android:id="@+id/dui_edt_psd"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:hint="请输入密码"
+        android:padding="5dp"
+        android:textColorHint="#99909090"/>
+
+    <Button
+        android:id="@+id/dui_btn_go"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:textSize="@dimen/xbig"
+        android:textColor="@color/white"
+        android:background="@drawable/xml_click_btn"
+        android:text="进入"/>
+
+</LinearLayout>

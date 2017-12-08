@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:avloading="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="40dp" >
+
+    <TextView
+        android:id="@+id/tv_foot_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#404040"
+        android:textSize="16sp" >
+    </TextView>
+
+    <com.sz.view.widget.AVLoadingIndicatorView
+        android:id="@+id/pb_foot_refreshing"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/tv_foot_title"
+        android:visibility="gone"
+        avloading:indicator="BallSpinFadeLoader"
+        avloading:indicator_color="@color/title_top_color" />
+
+    <!--
+         <ProgressBar
+        android:id="@+id/pb_foot_refreshing"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/tv_foot_title"
+        android:indeterminateDrawable="@drawable/pull_list_view_progressbar"
+        android:indeterminateDuration="1000"
+        android:visibility="gone" />
+    -->
+
+</RelativeLayout>

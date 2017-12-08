@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exit_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/function_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:text="@string/wlan_explain1"
+        android:textColor="#444"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/red"
+        android:text="请确保您的手机与电脑在同一WiFi热点内" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="25dp"
+        android:paddingLeft="10dp"
+        android:textSize="16dp"
+        android:textColor="#444"
+        android:text="1.如何将已加密的文件转移到电脑？" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray"
+        android:text="1) 点击”开启服务“按钮，鹏保宝将自动生成传输用的FTP地址；" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray"
+        android:text="2) 在电脑上使用浏览器（推荐IE），输入以上FTP地址并访问；" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray"
+        android:text="3) 在呈现所有的加密文件内，找到需要转移的文件，并下载至电脑；" />
+    
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingTop="25dp"
+        android:paddingLeft="10dp"
+        android:textSize="16dp"
+        android:textColor="#444"
+        android:text="2.如何在电脑上打开已被加密的文件？" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray"
+        android:text="1) 下载安装”核心文件保护工具“，地址如下：" />
+    
+    <cn.com.pyc.widget.PycUnderLineTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:text="@string/hexin_download_addr"
+        android:paddingLeft="10dp"
+        android:textColor="@color/blue"
+        android:textSize="@dimen/small" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray"
+        android:text="2) 核实身份运行”核心文件保护工具“，使用您的邮箱及钥匙密码进行身份核实。" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/gray"
+        android:text="3) 待”核心文件保护工具“正常运行后，即可打开从鹏保宝下载的文件；" />
+
+    <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="left"
+        android:padding="10dp"
+        android:text="@string/wlan_explain_txt"
+        android:textColor="#666"
+        android:textSize="16sp" /> -->
+
+    <Button
+        android:id="@+id/exitBtn0"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/xml_imb_green"
+        android:gravity="center"
+        android:onClick="exitbutton0"
+        android:text="知道了"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+</LinearLayout>

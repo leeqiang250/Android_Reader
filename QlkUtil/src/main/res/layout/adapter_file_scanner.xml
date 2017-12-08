@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/xml_transparent_gray"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/afs_imv_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/other_file"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/afs_txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/middle"/>
+
+        <LinearLayout
+            android:id="@+id/afs_lyt_datesize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/afs_txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_stroke"
+                android:textSize="@dimen/small"/>
+
+            <TextView
+                android:id="@+id/afs_txt_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/gray_stroke"
+                android:textSize="@dimen/small"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

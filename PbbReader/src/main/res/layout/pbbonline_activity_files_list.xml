@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/pbbonline_title_common_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center" >
+
+        <include
+            android:id="@+id/empty_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/view_empyt_pulldown"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/downloadfile_all_btn" >
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@+id/files_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:layoutAnimation="@anim/list_layout_animation"
+                android:listSelector="#00000000"
+                android:scrollbars="vertical" />
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@+id/files_offline_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="#00000000"
+                android:divider="@null"
+                android:layoutAnimation="@anim/list_layout_animation"
+                android:listSelector="#00000000"
+                android:scrollbars="vertical"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/downloadfile_all_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/xml_theme_stoken_btn"
+            android:gravity="center"
+            android:text="@string/downloaditem_all"
+            android:textColor="@color/title_top_color"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

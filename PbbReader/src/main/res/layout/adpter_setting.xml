@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <ImageView
+        android:id="@+id/as_imv_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/as_imv_pic"
+        android:drawablePadding="15dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/as_txt_name"
+            style="@style/black_middle"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            />
+        <TextView
+            android:id="@+id/as_txt_subname"
+            android:textColor="@color/black"
+            android:text="更多强大的高级功能"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/as_txt_arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawableRight="@drawable/arrows_green"
+        android:paddingRight="10dp" />
+
+    <TextView
+        android:id="@+id/as_txt_count"
+        style="@style/black_middle"
+        android:text="0"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/as_txt_arrows"
+        android:paddingRight="30dp"
+        android:drawablePadding="15dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

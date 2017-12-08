@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <Button
+        android:id="@+id/fkn_btn_qq"
+        style="@style/green_white_xbig"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="100dp"
+        android:text="绑定QQ号" />
+
+    <cn.com.pyc.widget.PycUnderLineTextView
+        android:id="@+id/fkn_txt_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="手动输入昵称"
+        android:textSize="@dimen/middle" />
+
+</LinearLayout>

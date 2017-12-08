@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <!-- 通用页面默认背景颜色 -->
+    <color name="bg_color">#F3F3F3</color>
+    <color name="bg_main_color">#f5f5f5</color>
+
+    <color name="transparent">#00000000</color>
+    
+    <color name="white">#FFFFFF</color>
+    
+     <!-- 天蓝色 -->
+    <color name="gray">#808080</color>
+    <!-- 灰色 -->
+    <color name="grey">#808080</color>
+    <!-- 暗灰色 -->
+    <color name="dimgrey">#696969</color>
+  	<color name="black">#bb000000</color>
+
+    <!-- 主题绿色 -->
+    <color name="top_color_green">#37B75E</color>
+
+    <!-- 添加color请写明注释，并规范命名 -->
+    <!-- 添加color请写明注释，并规范命名 -->
+    <!-- 添加color请写明注释，并规范命名 -->
+
+    <color name="line_color">#d7d7d7</color>
+    <!-- 亮天蓝色 -->
+    <color name="brilliant_blue">#01C7D2</color>
+    <color name="brilliant_tint_blue">#8CE0E5</color>
+
+    <!--内容和搜索item图片背景-->
+    <color name="search_item_img_bg">#445566</color>
+    <color name="orange">#e5cd88</color>
+    <color name="slightGray">#535353</color>
+    <color name="light_orange">#E4CD87</color>
+    <color name="gray_bg">#535353</color>
+    <color name="light_gray_bg">#CCCCCC</color>
+    <color name="orange_deep">#E5CC89</color>
+    <color name="seek_bar_bg">#383838</color>
+    <color name="seek_bar_progress">#A38D5E</color>
+    <color name="main_bg">#B7B7B7</color>
+    <color name="search_item_bg">#606060</color>
+    <color name="light_red">#F53169</color>
+    <color name="home_bg">#454545</color>
+    <color name="dialog_bg">#CDCDCD</color>
+
+
+</resources>

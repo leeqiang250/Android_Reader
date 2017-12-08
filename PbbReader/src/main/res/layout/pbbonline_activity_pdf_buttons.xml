@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mupdf_situation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rel_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/video_bkg_lightdark" >
+
+        <cn.com.pyc.widget.HighlightImageView
+            android:id="@+id/pdf_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_back" />
+
+        <View
+            android:layout_width="1.0dip"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/pdf_back"
+            android:visibility="gone"
+            android:background="@drawable/vertical_line" />
+
+        <cn.com.pyc.widget.MarqueeText
+            android:id="@+id/pdf_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/pdf_makebook"
+            android:layout_toRightOf="@id/pdf_back"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/pdf_makebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="18dp"
+            android:layout_toLeftOf="@id/pdf_back"
+            android:background="@drawable/xml_bookmark_icon" />
+    </RelativeLayout>
+
+    <ViewAnimator
+        android:id="@+id/switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:id="@+id/bottomBar0Main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/video_bkg_lightdark"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <SeekBar
+                    android:id="@+id/pageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:maxHeight="@dimen/seekbar_height"
+                    android:minHeight="@dimen/seekbar_height"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip"
+                    android:progressDrawable="@drawable/xml_progressbar"
+                    android:thumb="@drawable/seekbar_thumb"
+                    android:thumbOffset="10dip" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/currentPage_pdf_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="15dp"
+                        android:text="第1页"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/totalPage_pdf_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:paddingRight="15dp"
+                        android:text="共1页"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_bottom_width"
+                android:layout_width="match_parent"
+                android:layout_height="55dp" >
+
+                <cn.com.pyc.widget.HighlightImageView
+                    android:id="@+id/pdf_info_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/pbbonline_video_info" />
+
+                <TextView
+                    android:id="@+id/pdf_outlineText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:padding="3dp"
+                    android:text="@string/directory_bookmark_lable"
+                    android:textColor="@color/selector_direc_textcolor"
+                    android:textSize="18sp" />
+
+                <cn.com.pyc.widget.HighlightImageView
+                    android:id="@+id/pdf_list_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="17dp"
+                    android:src="@drawable/pbbonline_video_list" />
+
+                <TextView
+                    android:id="@+id/pdf_text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/pdf_list_Button"
+                    android:layout_alignTop="@id/pdf_list_Button"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginTop="-5dp"
+                    android:background="@drawable/circle_whitebg"
+                    android:gravity="center"
+                    android:textColor="#BB000000"
+                    android:textSize="8.8dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ViewAnimator>
+
+    <TextView
+        android:id="@+id/tv_float_page"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/dim_round_background"
+        android:gravity="center"
+        android:minWidth="88dp"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

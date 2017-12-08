@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示信息"
+        android:textColor="@color/green"
+        android:textSize="@dimen/big" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/divider_main" />
+
+    <TextView
+        style="@style/black_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:text="本地时间改动 ，无法阅读。需联网验证" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/avo_btn_sure"
+            style="@style/green_white_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证" />
+
+        <Button
+            android:id="@+id/avo_btn_cancel"
+            style="@style/white_green_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/xml_imb_white"
+            android:text="不验证" />
+    </LinearLayout>
+
+</LinearLayout>

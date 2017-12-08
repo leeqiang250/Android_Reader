@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/pbbonline_title_common_bar"/>
+
+    <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_swipe_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/imv_ico_search"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        app:drag_ratio="0.4"
+        app:swipe_style="classic">
+
+        <include
+            android:id="@id/swipe_refresh_header"
+            layout="@layout/layout_classic_header"/>
+
+        <ListView
+            android:id="@+id/swipe_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:groupIndicator="@null"
+            android:listSelector="@color/transparent"/>
+
+        <include
+            android:id="@id/swipe_load_more_footer"
+            layout="@layout/layout_classic_footer"/>
+
+
+    </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id="@+id/api_imv_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <CheckBox
+        android:id="@+id/api_cbx_check"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignRight="@id/api_imv_image"
+        android:layout_alignTop="@id/api_imv_image"
+        android:background="@drawable/xml_cbx_green"
+        android:button="@null"
+        android:focusable="false" />
+
+</RelativeLayout>

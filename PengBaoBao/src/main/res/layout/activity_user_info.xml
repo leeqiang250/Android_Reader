@@ -1,0 +1,330 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clickable="true"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray_bg"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_plain_top"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide"
+                android:layout_marginLeft="12dp"/>
+
+            <RelativeLayout
+                android:id="@+id/aui_lyt_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray_bg"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text=" 用户"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_user_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:minWidth="100dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/middle"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/arrows_green"
+                    android:layout_margin="@dimen/_10dp"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider_main"
+                android:visibility="gone"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide"
+                android:layout_marginLeft="12dp"/>
+
+            <RelativeLayout
+                android:id="@+id/aui_lyt_nick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray_bg"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text=" 昵称"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_nick_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:minWidth="100dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/middle"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@drawable/next"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide"
+                android:layout_marginLeft="12dp"/>
+
+            <!-- 密码 -->
+
+            <RelativeLayout
+                android:id="@+id/aui_lyt_modify_psd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray_bg"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text=" 密码"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@drawable/next"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide"
+                android:layout_marginLeft="12dp"/>
+
+            <!-- QQ -->
+
+            <RelativeLayout
+                android:id="@+id/aui_lyt_qq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/xml_item_gray"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableLeft="@drawable/qq"
+                    android:gravity="center_vertical"
+                    android:text="  QQ"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_qq_nick"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/text_pbb"
+                    android:textSize="@dimen/middle"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_qq_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/arrows_green"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/middle"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/divider_main"
+                android:visibility="gone"/>
+
+
+            <!-- 手机 -->
+
+            <RelativeLayout
+                android:id="@+id/aui_lyt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray_bg"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text=" 手机"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_phone_redbag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="验证手机号送10元红包"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_phone_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="@dimen/_10dp"
+                    android:drawableRight="@drawable/next"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/middle"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide"
+                android:layout_marginLeft="12dp"/>
+
+            <!-- 邮箱 -->
+
+            <RelativeLayout
+                android:id="@+id/aui_lyt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/light_gray_bg"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    style="@style/black_middle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:text=" 邮箱"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_email_redbag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="验证QQ邮箱送5元红包"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/aui_txt_email_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:layout_margin="@dimen/_10dp"
+                    android:drawableRight="@drawable/next"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/middle"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/divide"
+                android:layout_marginLeft="12dp"/>
+
+
+            <CheckBox
+                android:id="@+id/aui_cbx_input"
+                style="@style/black_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:button="@drawable/xml_cbx_green_big"
+                android:text="  每次运行鹏保宝时，将需要输入该密码"
+                android:visibility="gone"/>
+
+            <TextView
+                style="@style/black_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="钥匙密码：用于进入隐私空间，请牢记！\n可通过已绑定邮箱找回该密码"
+                android:textColor="@color/text_pbb"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/function_bg">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/top_color_green" >
+
+            <ImageButton
+                android:id="@+id/apa_imb_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:src="@drawable/ic_back"
+                android:background="@null"
+                android:contentDescription="@null"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="私密分享"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"/>
+            <TextView
+                android:id="@+id/apa_imb_chongzhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="充值"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:clickable="true" android:visibility="invisible"/>
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:orientation="vertical">
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择私密分享发送的文件"
+                android:textSize="20sp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@android:color/black"
+                />
+            <Button
+                android:id="@+id/apa_imb_cord"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="选择文件"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/xml_edit_blue"
+                />
+            <Button
+                android:id="@+id/apa_imb_photo"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="拍照片"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/xml_edit_blue"
+                android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/apa_imb_medio"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="录视频"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/xml_edit_blue"
+                android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/apa_imb_chat"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="录音"
+                android:textStyle="normal"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/xml_edit_blue"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/apa_lv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/white"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:listSelector="@drawable/xml_item_gray" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*更多高级功能请使用PC版"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageButton
+        android:id="@+id/vst_imb_setting_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/xml_setting_normal" />
+
+    <TextView
+        android:id="@+id/vst_txt_title"
+        style="@style/white_xbig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!--
+    <ImageSwitcher
+        android:id="@+id/vst_lyt_switch_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/vst_imb_add" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_change_serise_view" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/xml_change_lists_view" />
+    </ImageSwitcher>
+    -->
+
+
+    <!--
+      <ImageButton
+        android:id="@+id/vst_imb_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/xml_pdf_search"
+        android:onClick="onSearchClick" android:visibility="gone"/>
+    -->
+
+    <cn.com.pyc.widget.HighlightImageView
+        android:id="@+id/vst_imb_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/icon_add1"
+        android:onClick="onAddClick" />
+
+</RelativeLayout>

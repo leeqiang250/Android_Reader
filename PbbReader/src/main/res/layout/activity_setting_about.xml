@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/about_bg"
+                android:paddingBottom="10dp">
+
+    <include
+        android:id="@+id/asa_lyt_top"
+        layout="@layout/pbbonline_title_common_bar"/>
+
+    <TextView
+        android:id="@+id/asa_txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/asa_txt_version"
+        style="@style/white_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/asa_txt_name"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        tools:text="version_Release"/>
+
+    <ImageView
+        android:id="@+id/asa_imv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/asa_txt_name"
+        android:layout_below="@id/asa_lyt_top"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/pbb_about2"
+        tools:ignore="ContentDescription"/>
+
+    <Button
+        android:id="@+id/asa_imb_phone1"
+        style="@style/light_green_white_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/asa_txt_version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="服务电话1：13811965182"
+        android:visibility="gone"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/asa_txt_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="@string/cmp_name"
+        android:textColor="@color/white"/>
+
+    <cn.com.pyc.widget.PycUnderLineOrangeTextView
+        android:id="@+id/asa_txt_privacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/asa_txt_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:text="@string/privacy"
+        android:textSize="@dimen/middle"/>
+
+    <Button
+        android:id="@+id/asa_imb_phone2"
+        style="@style/light_green_white_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/asa_imb_phone1"
+        android:layout_alignStart="@+id/asa_imb_phone1"
+        android:layout_below="@+id/asa_imb_phone1"
+        android:layout_marginRight="30dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="服务电话2：13811977882"
+        android:visibility="gone"
+        tools:ignore="HardcodedText"/>
+
+</RelativeLayout>

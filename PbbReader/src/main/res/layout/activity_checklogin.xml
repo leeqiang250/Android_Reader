@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/pbbonline_title_common_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="请输入指定手机号领取文件"
+                android:textColor="@color/black_bb"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/al_tv_rednotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:text="这不是指定手机号无权操作"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <cn.com.pyc.widget.PycEditText
+                android:id="@+id/al_edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:hint="手机号码"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:paddingLeft="8dp"
+                android:textSize="18sp" />
+
+            <com.sz.view.widget.FlatButton
+                android:id="@+id/al_btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="下一步"
+                android:textColor="#FFFFFFFF"
+                android:textSize="16sp"
+                fbutton:buttonColor="@color/title_top_color"
+                fbutton:cornerRadius="4dp"
+                fbutton:shadowEnabled="false" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

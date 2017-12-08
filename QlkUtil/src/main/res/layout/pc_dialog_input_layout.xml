@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/dialog_ll_layout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:background="@drawable/sz_white_corner_bg"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="42.0dip"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/xml_dialog_title"
+        android:textSize="16.0sp"
+        tools:text="标题"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dip"
+        android:background="#c1c1c1"/>
+
+    <EditText
+        android:id="@+id/dialog_et_name"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip"
+        android:hint="用户名"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:textColor="#AA000000"
+        android:textSize="16.0sp"/>
+
+    <EditText
+        android:id="@+id/dialog_et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip"
+        android:hint="密码"
+        android:inputType="textPassword"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:textColor="#AA000000"
+        android:textSize="16.0sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="#C1C1C1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40.0dip"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/dialog_btn_negative"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/sz_bottom_corner_selector"
+            android:text="@string/xml_dialog_negative"
+            android:textSize="16.0dip"/>
+
+        <View
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:background="#C1C1C1"/>
+
+        <Button
+            android:id="@+id/dialog_btn_positive"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="@drawable/sz_bottom_corner_selector"
+            android:text="@string/xml_dialog_positive"
+            android:textSize="16.0dip"/>
+    </LinearLayout>
+
+</LinearLayout>

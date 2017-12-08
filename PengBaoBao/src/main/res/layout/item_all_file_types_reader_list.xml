@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <!-- 混合三种文件的列表item 和 系列里面的文件列表item都用这一个布局-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/item_search_img"
+            android:layout_width="53dp"
+            android:layout_height="46dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="2dp"
+            android:background="#EAEAEA"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_file_pdf"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/item_search_img"
+            android:layout_alignTop="@id/item_search_img"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/item_search_img">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_search_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="2dp"
+                    android:ellipsize="middle"
+                    android:singleLine="true"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    tools:text="儿歌三百首"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_search_name"
+                    android:layout_marginTop="9dp">
+
+                    <TextView
+                        android:id="@+id/item_search_ower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="2dp"
+                        android:ellipsize="middle"
+                        android:paddingRight="20sp"
+                        android:singleLine="true"
+                        android:textColor="@color/light_gray_bg"
+                        android:textSize="12sp"
+                        tools:text="三藏精灵"/>
+
+                    <TextView
+                        android:id="@+id/item_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:ellipsize="middle"
+                        android:maxLines="1"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        tools:text="2017"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/icon_arrow_grey"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/light_gray_bg"/>
+
+</LinearLayout>

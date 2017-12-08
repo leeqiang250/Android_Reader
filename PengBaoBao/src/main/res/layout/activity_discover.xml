@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.com.pyc.suizhi.SZDiscoverActivity">
+
+    <include layout="@layout/pbbonline_title_common_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 联网失败提示 -->
+
+        <LinearLayout
+            android:id="@+id/sd_ll_failure"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/function_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/sd_imv_failure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/conn_failed"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:shadowColor="@color/white"
+                android:shadowDx="2"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:text="天呐！网络连接失败\n连接网络后下拉刷新一下吧"
+                android:textColor="@color/black_bb"
+                android:textSize="@dimen/big"/>
+        </LinearLayout>
+
+        <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/swipeToLoadLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            app:drag_ratio="0.7"
+            app:refresh_enabled="true"
+            app:swipe_style="classic">
+
+            <!-- Header,Footer,target的id必须与指定的一致 -->
+            <!-- swipe_target,swipe_load_more_footer,swipe_refresh_header -->
+            <include
+                android:id="@id/swipe_refresh_header"
+                layout="@layout/layout_classic_header"/>
+
+            <com.sz.view.widget.ProgressWebView
+                android:id="@+id/swipe_target"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3.0dp"
+                android:background="@color/transparent"/>
+
+        </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+

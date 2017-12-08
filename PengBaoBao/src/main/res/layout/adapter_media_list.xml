@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xml_item_gray" >
+
+    <ImageView
+        android:id="@+id/aml_imv_pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp" />
+
+    <CheckBox
+        android:id="@+id/aml_cbx_check"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/xml_cbx_green"
+        android:button="@null"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/aml_cbx_check"
+        android:layout_toRightOf="@id/aml_imv_pic" >
+
+        <TextView
+            android:id="@+id/aml_txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/middle" />
+
+        <TextView
+            android:id="@+id/aml_txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aml_txt_name"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/aml_txt_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aml_txt_name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/aml_txt_time"
+            android:textColor="@color/gray" />
+    </RelativeLayout>
+
+</RelativeLayout>

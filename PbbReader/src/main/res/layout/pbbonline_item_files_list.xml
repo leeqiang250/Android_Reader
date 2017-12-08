@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.82" >
+
+            <TextView
+                android:id="@+id/tv_file_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2.0dp"
+                android:maxLines="2"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"
+                android:paddingTop="8dp"
+                android:singleLine="false"
+                android:text="PBBOnline文件"
+                android:textColor="@color/black_bb"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rel_file_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_file_name"
+                android:gravity="center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/iv_file_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="2dp"
+                    android:src="@drawable/ic_validate_time_nor" />
+
+                <TextView
+                    android:id="@+id/tv_file_status_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/iv_file_status"
+                    android:gravity="center"
+                    android:text="文件状态: "
+                    android:textColor="@color/gray"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_file_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/tv_file_status_lable"
+                    android:gravity="center"
+                    android:text="未下载"
+                    android:textColor="@color/gray"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.18"
+            android:gravity="center_horizontal" >
+
+            <FrameLayout
+                android:id="@+id/fl_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" >
+
+                <com.sz.view.widget.RoundProgressBar
+                    xmlns:rpb="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/rpb_file"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/download_button"
+                    rpb:roundColor="@color/touming"
+                    rpb:roundWidth="1.6dp"
+                    rpb:textSize="10.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_file_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="已被收回"
+                    android:textColor="#F56563"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_file_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fl_download"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5.0dp"
+                android:text="0.0KB"
+                android:textColor="#727272"
+                android:textSize="12.0sp" />
+
+            <ImageView
+                android:id="@+id/iv_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_arrow_to_right"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#d7d7d7" />
+
+</LinearLayout>

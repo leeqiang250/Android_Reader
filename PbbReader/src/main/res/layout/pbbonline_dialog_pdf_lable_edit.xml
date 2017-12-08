@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#f3f3f3"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/edit_shuqian"
+        android:layout_width="match_parent"
+        android:layout_height="44.0dp"
+        android:gravity="center"
+        android:text="编辑书签"
+        android:textColor="#FF8D8D8D"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_alignBottom="@+id/edit_shuqian"
+        android:background="#c0c0c0" />
+
+    <EditText
+        android:id="@+id/edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#00000000"
+        android:enabled="true"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:lineSpacingExtra="2.0dp"
+        android:maxLines="6"
+        android:minLines="4"
+        android:scrollbars="vertical"
+        android:textColor="#a6000000"
+        android:textSize="16sp" >
+    </EditText>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#c0c0c0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/dialog_edit_btn_negative"
+            android:layout_width="0dp"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg_selector"
+            android:singleLine="true"
+            android:text="@string/xml_dialog_negative"
+            android:textColor="#FF8D8D8D"
+            android:textSize="16.0sp" />
+
+        <View
+            android:layout_width="0.2dp"
+            android:layout_height="30dp"
+            android:background="#c0c0c0" />
+
+        <Button
+            android:id="@+id/dialog_edit_btn_positive"
+            android:layout_width="0dp"
+            android:layout_height="44.0dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/item_bg_selector"
+            android:singleLine="true"
+            android:text="@string/xml_dialog_positive"
+            android:textColor="#FF8D8D8D"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

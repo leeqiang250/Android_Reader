@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/item_light_bg_selector"
+              android:descendantFocusability="blocksDescendants"
+              android:orientation="vertical">
+
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">-->
+
+    <TextView
+        android:id="@+id/tv_offline_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="2.0dp"
+        android:maxLines="2"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:paddingTop="6dp"
+        android:singleLine="false"
+        android:textColor="@color/black_bb"
+        android:textSize="18sp"
+        tools:text="DRM文件"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/iv_offline_file_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingTop="2dp"
+            android:src="@drawable/ic_validate_time_nor"/>
+
+        <TextView
+            android:id="@+id/tv_offline_file_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/iv_offline_file_status"
+            android:gravity="center"
+            android:text="@string/downloaditem_status_label"
+            android:textColor="@color/gray"
+            android:textSize="12.0sp"/>
+
+        <TextView
+            android:id="@+id/tv_offline_file_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/tv_offline_file_label"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:textSize="12.0sp"
+            tools:text="永久有效"/>
+
+        <TextView
+            android:id="@+id/tv_offline_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/black_bb"
+            android:textSize="12.0sp"
+            tools:ignore="HardcodedText"
+            tools:text="999.9M"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/line_color"/>
+
+</LinearLayout>

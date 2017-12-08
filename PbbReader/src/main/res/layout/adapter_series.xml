@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/xml_sm_item_group"
+    android:padding="5dp" >
+
+    <ImageView
+        android:id="@+id/folder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/icon_serise_folder" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/arrows_green" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/arrow"
+        android:layout_toRightOf="@id/folder"
+        android:orientation="vertical"
+        android:padding="3dp" >
+
+        <cn.com.pyc.widget.MarqueeText
+            android:id="@+id/as_txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/big" />
+
+        <cn.com.pyc.widget.MarqueeText
+            android:id="@+id/as_txt_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="2dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/small" />
+    </LinearLayout>
+
+</RelativeLayout>

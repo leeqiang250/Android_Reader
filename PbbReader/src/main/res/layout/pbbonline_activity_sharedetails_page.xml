@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/pbbonline_title_common_bar" />
+
+    <cn.com.pyc.pbbonline.widget.ExpandableLayout
+        android:id="@+id/app_detail_safety_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:background="#EAEAEA"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/Share_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title_bar"
+            android:animateLayoutChanges="true"
+            android:background="@color/light_gray" >
+
+            <LinearLayout
+                android:id="@+id/sharepeoplell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/sharepeopletv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sharepeople"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/sharepeopleans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Postscriptll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sharepeoplell"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/Postscripttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Postscript"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/postscriptans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:lineSpacingExtra="2.0dp"
+                    android:singleLine="false"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/equipmentll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Postscriptll"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/equipmenttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/equipment"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/equipmentans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/timelimitll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/equipmentll"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/timelimittv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/timelimit"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/timelimitans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.4dp"
+                android:layout_below="@+id/timelimitll"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/line_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Trigger_start_off"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_below="@+id/Share_details"
+            android:background="@color/light_gray" >
+
+            <ImageView
+                android:id="@+id/iv_trigg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/shouq" />
+        </RelativeLayout>
+    </cn.com.pyc.pbbonline.widget.ExpandableLayout>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_folder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_detail_safety_info"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#d3d3d3"
+        android:dividerHeight="0.3dp"
+        android:listSelector="@color/transparent" >
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
+    
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_offline_folder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_detail_safety_info"
+        android:background="@color/white"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#d3d3d3"
+        android:dividerHeight="0.3dp"
+        android:visibility="gone"
+        android:listSelector="@color/transparent" >
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
+
+    <include
+        android:id="@+id/arl_lyt_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        layout="@layout/view_empyt_pulldown"
+        android:visibility="gone" />
+
+</RelativeLayout>

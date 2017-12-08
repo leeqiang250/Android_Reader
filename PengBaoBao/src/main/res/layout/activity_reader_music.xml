@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:qlk="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_color_green" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick" />
+
+        <TextView
+            style="@style/white_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="播放" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/imv_bkg_music" >
+
+        <RelativeLayout
+            android:id="@+id/arm_lyt_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp" >
+
+            <SeekBar
+                android:id="@+id/arm_skb_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_margin="2dp"
+                android:layout_marginRight="2dp"
+                android:progressDrawable="@drawable/xml_skb_music"
+                android:thumb="@drawable/music_thumb"
+                android:thumbOffset="2dp" />
+
+            <TextView
+                android:id="@+id/arm_txt_cur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/arm_skb_progress"
+                android:layout_below="@id/arm_skb_progress"
+                android:layout_marginTop="5dp"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/arm_txt_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/arm_skb_progress"
+                android:layout_below="@id/arm_skb_progress"
+                android:layout_marginTop="5dp"
+                android:text="00:00:00"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/arm_lyt_middle"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/arm_txt_countdown"
+                style="@style/white_big"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/countdown_gray"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <com.qlk.util.widget.AutoAjustSizeTextView
+                android:id="@+id/arm_txt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                qlk:marquee="true"
+                qlk:maxTextSize="30sp"
+                qlk:minTextSize="15sp"
+                qlk:singleLine="true" />
+
+            <RelativeLayout
+                android:id="@+id/arm_lyt_control_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/arm_txt_title"
+                android:layout_marginRight="10dp"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/arm_imv_volume"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/music_volume_yes" />
+
+                <cn.com.pyc.widget.MySeekBar
+                    android:id="@+id/arm_skb_volume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_above="@id/arm_imv_volume"
+                    android:layout_centerHorizontal="true"
+                    android:paddingLeft="4dp"
+                    android:progressDrawable="@drawable/xml_skb_vertical_small"
+                    android:thumb="@drawable/music_thumb_small"
+                    android:thumbOffset="5dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/arm_imb_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/arm_lyt_middle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/music_pause" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:id="@+id/afg_txt_name"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:layout_gravity="center_vertical"
+          android:drawablePadding="3dp"
+          android:drawableRight="@drawable/arrow_right_gray"
+          android:gravity="center_vertical"
+          android:paddingLeft="5dp"
+          android:paddingTop="3dp"
+          android:textColor="@color/black"
+          android:textSize="@dimen/middle"/>
+

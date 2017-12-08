@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pbb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg_selector"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="68.0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <cn.com.pyc.pbbonline.widget.SmoothCheckBox
+            android:id="@+id/record_checkbox"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:focusable="false"
+            android:visibility="gone"
+            pbb:color_checked="@color/title_top_color"
+            pbb:color_tick="@color/white"
+            pbb:color_unchecked="@color/bg_color"
+            pbb:color_unchecked_stroke="#d7d7d7"
+            pbb:duration="80"
+            pbb:stroke_width="1.0dp" />
+
+        <RelativeLayout
+            android:id="@+id/record_rl_folder"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/record_checkbox" >
+
+            <ImageView
+                android:id="@+id/record_iv"
+                android:layout_width="44dp"
+                android:layout_height="40dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_sa_msg" />
+
+            <ImageView
+                android:id="@+id/record_iv_dot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="3dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/circle_gules"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/record_rl_folder"
+            android:layout_alignTop="@id/record_rl_folder"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/record_state"
+            android:layout_toRightOf="@id/record_rl_folder" >
+
+            <TextView
+                android:id="@+id/record_sharename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:singleLine="true"
+                android:text="PBBOnline"
+                android:textColor="#212121"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/record_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="username"
+                    android:textColor="#85000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/record_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="2014.10.01"
+                    android:textColor="#85000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/record_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="已被收回"
+            android:textColor="#F56563"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.4dp"
+        android:background="#d7d7d7" />
+
+</LinearLayout>

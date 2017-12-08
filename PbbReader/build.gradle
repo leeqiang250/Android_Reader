@@ -1,0 +1,96 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+//命令行：gradlew assembleRelease
+
+//读取签名证书的密码和名字
+def keystorePropertiesFile = rootProject.file("release-key/keystore.properties")
+def keystorePropeties = new Properties();
+keystorePropeties.load(new FileInputStream(keystorePropertiesFile));
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+    defaultConfig {
+        //applicationId "cn.com.pyc.pbb"
+        //更改包名
+        //applicationId "cn.com.pyc.pbb.reader"
+        minSdkVersion 14
+        targetSdkVersion 21
+        //versionCode 41
+        //versionName '2.4.2'
+    }
+
+    //签名
+    signingConfigs {
+        sign {
+            storeFile file(keystorePropeties['storeFile'])
+            storePassword keystorePropeties['storePassword']
+            keyAlias keystorePropeties['keyAlias']
+            keyPassword keystorePropeties['keyPassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false                     //混淆
+            zipAlignEnabled true                    //zipAlign优化
+            shrinkResources false                   //移除无用的resource文件
+            signingConfig signingConfigs.sign       //使用签名
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //resValue "string", "app_version", "2.5.2"     //不使用了,比较版本的地方直接获取versionName
+            resValue "string", "version_lable", "V 2.5.3"
+        }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.sign
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //resValue "string", "app_version", "2.5.2.20171016_Debug"
+            resValue "string", "version_lable", "V 2.5.3"
+        }
+    }
+
+    //配置打包出的apk名称eg:AppName_v2.3.5_201612121530-13服.apk
+//    applicationVariants.all { variant ->
+//        variant.outputs.each { output ->
+//            def env = 'release'.equalsIgnoreCase(variant.buildType.name) ? "正式" : "测试"
+//            def apkName = 'PbbReader' + "_v${variant.versionName}" + "_${releaseTime()}" + "-${env}" + '.apk'
+//            def nName = output.outputFile.name.replace(output.outputFile.name, apkName)
+//            output.outputFile = new File(output.outputFile.parent, nName)
+//            //删除掉unaligned apk
+//            if (output.zipAlign != null) {
+//                output.zipAlign.doLast {
+//                    output.zipAlign.inputFile.delete()
+//                }
+//            }
+//        }
+//    }
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+        //checkReleaseBuilds false
+        disable 'MissingTranslation'        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+    }
+
+}
+
+//定义发布时间
+def releaseTime() {
+    return new Date().format("yyyyMMdd")
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/android-core-3.1.1-SNAPSHOT.jar')
+    compile files('libs/core-3.1.1-SNAPSHOT.jar')
+    compile files('libs/fastjson-1.1.26.jar')
+    compile files('libs/jpush-android-2.0.5.jar')
+    compile files('libs/pyc-loger-1.1.jar')
+    //compile project(':QlkUtil')
+    //避免debug运行时，QlkUtil中BuildConfig.DEBUG=false;
+    releaseCompile project(path: ':QlkUtil', configuration: 'release')
+    debugCompile project(path: ':QlkUtil', configuration: 'debug')
+}

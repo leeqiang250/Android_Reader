@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aspsine.swipetoloadlayout.ClassicLoadMoreFooterView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/swip_footer_height" >
+
+        <com.sz.view.widget.AVLoadingIndicatorView
+            xmlns:avloading="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/classic_footer_progressbar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/classic_footer_hint_textview"
+            android:visibility="invisible"
+            avloading:indicator="BallSpinFadeLoader"
+            avloading:indicator_color="@color/title_top_color" />
+
+        <TextView
+            android:id="@+id/classic_footer_hint_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="8dp"
+            android:text="@string/xlistview_footer_hint_normal"
+            android:textColor="#727272"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</com.aspsine.swipetoloadlayout.ClassicLoadMoreFooterView>

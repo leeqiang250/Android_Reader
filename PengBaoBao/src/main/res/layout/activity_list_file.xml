@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/title_top_color">
+
+        <cn.com.pyc.widget.HighlightImageView
+            android:id="@+id/alf_back_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/alf_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/alf_fun_tv"
+            android:layout_toRightOf="@id/alf_back_img"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="16.0sp"/>
+
+        <TextView
+            android:id="@+id/alf_fun_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13.0dp"
+            android:gravity="center"
+            android:text="@string/file_continuous_play"
+            android:textColor="@color/white"
+            android:textSize="14.0sp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <include
+            android:id="@+id/empty_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            layout="@layout/view_empyt_pulldown"
+            android:visibility="gone" />
+
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@+id/alf_local_files_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:layoutAnimation="@anim/list_layout_animation"
+            android:listSelector="#00000000"
+            android:paddingBottom="5dp"
+            android:scrollbars="vertical"
+            android:visibility="gone"/>
+
+        <cn.com.pyc.pbbonline.widget.PullListView
+            android:id="@+id/alf_files_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:layoutAnimation="@anim/list_layout_animation"
+            android:listSelector="#00000000"
+            android:paddingBottom="5dp"
+            android:scrollbars="vertical"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/function_bg"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_color_green" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick" />
+
+        <TextView
+            android:id="@+id/ipt_txt_title"
+            style="@style/white_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="传播控制" />
+
+        <cn.com.pyc.widget.PycUnderLineWhiteTextView
+            android:id="@+id/txt_pay_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:clickable="true"
+            android:text="资费介绍" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_hand_activition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/xml_hand_activite"
+        android:text="限制设备 手动激活"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:text="你需要手动激活后Ta才能阅读\n激活时向鹏保宝支付费用"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/imv_divider_four" />
+
+    <Button
+        android:id="@+id/btn_hand_free_spread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/xml_free_spread"
+        android:text="自由传播"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:text="你可以随时控制已发出的文件"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+</LinearLayout>

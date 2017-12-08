@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/musicRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/music_title_bar"
+        layout="@layout/pbbonline_music_title_bar" />
+
+    <FrameLayout
+        android:id="@+id/frame_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_bar"
+        android:layout_below="@id/music_title_bar"
+        android:layout_marginTop="1.0dp" >
+
+        <cn.com.pyc.pbbonline.widget.WaveView
+            xmlns:wave="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/wave_view"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@color/transparent"
+            android:visibility="invisible"
+            wave:above_wave_color="#CECECE"
+            wave:blow_wave_color="#CECECE"
+            wave:progress="90"
+            wave:wave_height="middle"
+            wave:wave_hz="slow"
+            wave:wave_length="large" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <cn.com.pyc.pbbonline.widget.RoundCornerIndicaor
+            xmlns:rci="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/indicator_square"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dip"
+            rci:rci_cornerRadius="20dp"
+            rci:rci_gap="6dp"
+            rci:rci_height="6dp"
+            rci:rci_strokeColor="#3083FD"
+            rci:rci_strokeWidth="1.0px"
+            rci:rci_selectColor="#3083FD"
+            rci:rci_unselectColor="@color/white"
+            rci:rci_width="6dp" />
+
+        <SeekBar
+            android:id="@+id/progressSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:maxHeight="@dimen/seekbar_height"
+            android:minHeight="@dimen/seekbar_height"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:progressDrawable="@drawable/xml_progressbar"
+            android:thumb="@drawable/seekbar_thumb"
+            android:thumbOffset="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/player_control"
+            android:layout_width="match_parent"
+            android:layout_height="100dip" >
+
+            <ImageButton
+                android:id="@+id/pausebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/pbbonline_music_play"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/prevbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0.0dip"
+                android:layout_toLeftOf="@id/pausebtn"
+                android:src="@drawable/pbbonline_music_prev" />
+
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="90dip"
+                android:layout_toRightOf="@id/pausebtn"
+                android:src="@drawable/pbbonline_music_list" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/menu"
+                android:layout_alignTop="@+id/menu"
+                android:layout_marginRight="-4dp"
+                android:layout_marginTop="-5dp"
+                android:background="@drawable/pbbonline_circle_white"
+                android:gravity="center"
+                android:textColor="#BB000000"
+                android:textSize="8.8dp" />
+
+            <ImageButton
+                android:id="@+id/prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="65dip"
+                android:layout_toLeftOf="@id/pausebtn"
+                android:background="@drawable/pbbonline_shunxu" />
+
+            <cn.com.pyc.widget.HighlightImageView
+                android:id="@+id/nextbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/pausebtn"
+                android:focusable="true"
+                android:src="@drawable/pbbonline_music_next" />
+
+            <TextView
+                android:id="@+id/currTimeTextView"
+                android:layout_width="50.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="13.0sp" />
+
+            <TextView
+                android:id="@+id/totalTimeTextView"
+                android:layout_width="50.0dip"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/pausebtn"
+                android:layout_alignParentRight="true"
+                android:gravity="center_horizontal"
+                android:text="00:00"
+                android:textColor="@color/white"
+                android:textSize="13.0sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

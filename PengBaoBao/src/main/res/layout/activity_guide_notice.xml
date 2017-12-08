@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_green"
+    android:id="@+id/ll_guide_notice"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="首次验证手机成功获赠10次免费激活"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <CheckBox
+        android:id="@+id/agu_cbx_show"
+        style="@style/black_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:button="@drawable/xml_cbx_green_big"
+        android:text="  不再显示" />
+
+</LinearLayout>

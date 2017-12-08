@@ -1,0 +1,11 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fwl_txt_info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:shadowColor="@color/white"
+    android:shadowDx="2"
+    android:shadowDy="2"
+    android:shadowRadius="3"
+    android:textColor="@color/black"
+    android:textSize="15sp" />

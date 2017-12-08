@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/about_bg"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <include layout="@layout/include_plain_top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <cn.com.pyc.widget.PsdEditText
+            android:id="@+id/aump_edt_old_psd"
+            style="@style/black_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="输入新密码(4-16位)"/>
+
+        <cn.com.pyc.widget.PsdEditText
+            android:id="@+id/aump_edt_new_psd"
+            style="@style/black_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="输入新密码(4-16位)"/>
+
+        <cn.com.pyc.widget.PsdEditText
+            android:id="@+id/aump_edt_new_psd_again"
+            style="@style/black_middle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="再次输入新密码(4-16位)"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/aump_btn_modify"
+        style="@style/orange_black_xbig"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dp"
+        android:layout_margin="20dp"
+        android:text="提交"/>
+
+</LinearLayout>

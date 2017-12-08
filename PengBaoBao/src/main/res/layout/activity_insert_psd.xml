@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_insertPsdAct"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_green"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/aip_lyt_cipher"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top_color_green" >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick" />
+
+        <TextView
+            style="@style/white_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="隐私空间" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/aip_imv_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/insert" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <cn.com.pyc.widget.PycPsdEditText
+            android:id="@+id/aip_edt_psd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:hint="输入您的钥匙密码" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <CheckBox
+                android:id="@+id/aip_cbx_show"
+                android:textColor="@color/white"
+                android:textSize="@dimen/big"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:button="@drawable/xml_cbx_green"
+                android:text="  显示密码" >
+            </CheckBox>
+
+            <cn.com.pyc.widget.PycUnderLineYellowTextView
+                android:id="@+id/aip_txt_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/aip_cbx_show"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="忘记密码?"
+                android:textSize="@dimen/big" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/aip_btn_insert"
+            android:background="@drawable/xml_imb_white"
+            android:textColor="@color/green"
+            android:textSize="@dimen/xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:text="进入"
+            android:width="130dp" />
+    </LinearLayout>
+
+</LinearLayout>

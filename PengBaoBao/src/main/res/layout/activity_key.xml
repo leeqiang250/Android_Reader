@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/function_bg"
+              android:clickable="true"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/frame_bg">
+
+        <ImageButton
+            android:id="@+id/ak_btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingRight="23dp"
+            android:paddingLeft="23dp"
+            android:background="@drawable/ic_back"
+            android:onClick="onBackButtonClick"/>
+
+        <TextView
+            android:id="@+id/ak_txt_title"
+            style="@style/white_xbig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/ak_lyt_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+</LinearLayout>
